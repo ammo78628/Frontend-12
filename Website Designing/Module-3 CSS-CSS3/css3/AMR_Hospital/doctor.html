@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#0b1c30",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#341100",
+                        "secondary-container": "#86f2e4",
+                        "surface": "#f8f9ff",
+                        "inverse-surface": "#213145",
+                        "background": "#f8f9ff",
+                        "surface-bright": "#f8f9ff",
+                        "outline-variant": "#c5c5d3",
+                        "surface-container": "#e5eeff",
+                        "surface-container-highest": "#d3e4fe",
+                        "inverse-primary": "#b6c4ff",
+                        "secondary": "#006a61",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "outline": "#757682",
+                        "on-primary-fixed": "#00164e",
+                        "primary": "#00236f",
+                        "on-secondary-container": "#006f66",
+                        "primary-container": "#1e3a8a",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "secondary-fixed": "#89f5e7",
+                        "on-tertiary-fixed-variant": "#773205",
+                        "secondary-fixed-dim": "#6bd8cb",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#444651",
+                        "on-tertiary-container": "#f39461",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary-container": "#6e2c00",
+                        "tertiary-fixed": "#ffdbcb",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#4b1c00",
+                        "on-secondary-fixed-variant": "#005049",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "on-primary-container": "#90a8ff",
+                        "primary-fixed": "#dce1ff",
+                        "surface-tint": "#4059aa",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "on-background": "#0b1c30",
+                        "on-primary-fixed-variant": "#264191",
+                        "on-secondary-fixed": "#00201d",
+                        "surface-variant": "#d3e4fe",
+                        "surface-dim": "#cbdbf5",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .doctor-card-shadow {
+            box-shadow: 0 4px 12px rgba(11, 28, 48, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopNavBar Section -->
+<header class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant shadow-sm w-full">
+<nav class="flex justify-between items-center px-lg py-md w-full max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary">AMR Hospital</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="doctor.html">Doctors</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="staff.html">Staff</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="appointment.html">Appointment Booking</a>
+</div>
+<div class="flex items-center gap-base">
+<button class="bg-surface-container-low hover:bg-surface-container-highest/10 transition-all duration-200 px-sm py-xs rounded-lg text-primary font-label-md text-label-md hidden sm:block">Patient Portal</button>
+<button class="bg-primary text-on-primary px-md py-xs rounded-lg font-label-md text-label-md active:opacity-80 active:scale-95 transition-transform">Emergency</button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-lg py-xl">
+<!-- Hero Search Section -->
+<section class="mb-xl text-center md:text-left">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">Our Specialists</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-lg">
+                Connect with world-class medical professionals committed to clinical excellence and compassionate care across over 40 specialized departments.
+            </p>
+<div class="bg-surface-container-lowest p-sm rounded-2xl doctor-card-shadow flex flex-col md:flex-row gap-sm items-center max-w-3xl border border-outline-variant/30">
+<div class="flex items-center gap-xs px-sm flex-1 w-full">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-body-md py-sm" placeholder="Search by doctor name or specialty..." type="text"/>
+</div>
+<div class="hidden md:block w-px h-8 bg-outline-variant/50"></div>
+<div class="flex items-center gap-xs px-sm w-full md:w-auto">
+<span class="material-symbols-outlined text-outline">location_on</span>
+<select class="bg-transparent border-none focus:ring-0 text-body-md py-sm cursor-pointer">
+<option>All Locations</option>
+<option>Main Campus</option>
+<option>West Wing</option>
+</select>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary px-lg py-sm rounded-xl font-label-md text-label-md font-bold">
+                    Search
+                </button>
+</div>
+</section>
+<!-- Department Chips -->
+<section class="flex flex-wrap gap-sm mb-lg">
+<button class="px-md py-xs bg-primary text-on-primary rounded-full font-label-md text-label-md">All Doctors</button>
+<button class="px-md py-xs bg-surface-container text-on-surface-variant hover:bg-surface-container-high rounded-full font-label-md text-label-md transition-colors">Cardiology</button>
+<button class="px-md py-xs bg-surface-container text-on-surface-variant hover:bg-surface-container-high rounded-full font-label-md text-label-md transition-colors">Neurology</button>
+<button class="px-md py-xs bg-surface-container text-on-surface-variant hover:bg-surface-container-high rounded-full font-label-md text-label-md transition-colors">Pediatrics</button>
+<button class="px-md py-xs bg-surface-container text-on-surface-variant hover:bg-surface-container-high rounded-full font-label-md text-label-md transition-colors">Orthopedics</button>
+<button class="px-md py-xs bg-surface-container text-on-surface-variant hover:bg-surface-container-high rounded-full font-label-md text-label-md transition-colors">Oncology</button>
+<button class="px-md py-xs bg-surface-container text-on-surface-variant hover:bg-surface-container-high rounded-full font-label-md text-label-md transition-colors">Dermatology</button>
+</section>
+<!-- Doctor Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Doctor Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden doctor-card-shadow border border-outline-variant/30 flex flex-col group transition-all duration-300 hover:-translate-y-1">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a male doctor in a white clinical coat, wearing a stethoscope around his neck. He has a warm, confident smile and is positioned against a clean, softly lit medical office background. The lighting is bright and airy, reflecting a modern healthcare environment with navy blue and teal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0MHnsM-ViZRRokNsMwcrs1w590-PdJh2W9mxI_uWsBt46UKtsGciuJTtH7gD58NjfHRI_Pwdjhb6Lqmtr0_bnPcjRdolclPLhbJha983xXzyxfRzKAh6OWFjKcx9QmgxvznN5DoI9N7snjLNXORq2BslvWTDKJfAxCPeLkoAGGiJRDItzJ9JlC1IeJy5kDmT_dBawQ1VsTPbimmQxOIm46tTlVHF36P3W6voewsaO1a1UIBLb-03-AHw0RWpee4jc12PJNaK0cZU"/>
+<div class="absolute top-sm right-sm bg-secondary-container/90 backdrop-blur-sm text-on-secondary-container px-sm py-xs rounded-full font-label-sm text-label-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        4.9 (120+ Reviews)
+                    </div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Dr. James Wilson</h3>
+<p class="font-label-md text-label-md text-secondary font-bold mb-md uppercase tracking-wider">Senior Cardiologist</p>
+<div class="space-y-sm mb-lg flex-grow">
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">work_history</span>
+<span class="text-body-md font-body-md">15+ Years Experience</span>
+</div>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">language</span>
+<span class="text-body-md font-body-md">English, Spanish</span>
+</div>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">verified</span>
+<span class="text-body-md font-body-md">Harvard Medical School</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<button class="bg-surface-container-low text-primary py-sm rounded-xl font-label-md text-label-md font-bold hover:bg-surface-container transition-colors">
+                            Profile
+                        </button>
+<button class="bg-primary text-on-primary py-sm rounded-xl font-label-md text-label-md font-bold hover:opacity-90 transition-opacity">
+                            Book
+                        </button>
+</div>
+</div>
+</div>
+<!-- Doctor Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden doctor-card-shadow border border-outline-variant/30 flex flex-col group transition-all duration-300 hover:-translate-y-1">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a female pediatrician smiling warmly. She is wearing a soft blue medical scrub top and a light gray stethoscope. The background is a modern clinic with bright natural light and soft teal wall accents, creating an approachable and expert calm atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMNNGbHPnSQmy_ckp0l8ia1UC6OrZzdSyH9yo9L6QPzTxwyKKRPke-MfY7vHCo8X9G6lOTxdHJVMoDpbYU9WnaG2eDmcvu1SdbbJoPgL7JiQQin_O1YnDzD67RBlPJZETeRvExbrQNtj0znhHUlf7ufhHHb5UzdqIFJVwbcVj9_3slOTx_ep5tmn4WoOZ8bHfuiuYjnWL1mfq4QiHfgxPTy8BrUpNaDjoERDsAQuFzH5EDwC2y-NiGnKiQ4a_PQ9VfFEptJVIsOvo"/>
+<div class="absolute top-sm right-sm bg-secondary-container/90 backdrop-blur-sm text-on-secondary-container px-sm py-xs rounded-full font-label-sm text-label-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        5.0 (85+ Reviews)
+                    </div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Dr. Sarah Chen</h3>
+<p class="font-label-md text-label-md text-secondary font-bold mb-md uppercase tracking-wider">Chief Pediatritian</p>
+<div class="space-y-sm mb-lg flex-grow">
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">work_history</span>
+<span class="text-body-md font-body-md">12+ Years Experience</span>
+</div>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">language</span>
+<span class="text-body-md font-body-md">English, Mandarin</span>
+</div>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">verified</span>
+<span class="text-body-md font-body-md">Johns Hopkins Univ.</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<button class="bg-surface-container-low text-primary py-sm rounded-xl font-label-md text-label-md font-bold hover:bg-surface-container transition-colors">
+                            Profile
+                        </button>
+<button class="bg-primary text-on-primary py-sm rounded-xl font-label-md text-label-md font-bold hover:opacity-90 transition-opacity">
+                            Book
+                        </button>
+</div>
+</div>
+</div>
+<!-- Doctor Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden doctor-card-shadow border border-outline-variant/30 flex flex-col group transition-all duration-300 hover:-translate-y-1">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A male orthopedic surgeon in professional attire, looking serious but approachable. He stands in a high-tech medical facility with subtle blue lighting and clean lines. The overall image has a corporate medical aesthetic with high contrast and sharp focus, emphasizing expertise and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuBRaRRoTtdvgXXFKE8sAuLMC6-ft9qu4TX8wly6Q7m-1GqTYHH1ruifv4BvMfXg08Z29kP6tsgYHty_LSuvde0bvD22iAv6IRxUmi63mNmTA16i8yxFIt2Wc1oI5tZhmb0GQQ1uBxOVX9kQdiAISE2WgAkvrzGzt1NgHbUbQxWX6DNEqYE51vQ3wZbsIdlIskg31aZH_A2L7Jgf3MAve68sZ2gMiSMX-FFFqFT9MXwMtAaxNFcu4E_IP1fcvmPPLncs9_0jXTnqs"/>
+<div class="absolute top-sm right-sm bg-secondary-container/90 backdrop-blur-sm text-on-secondary-container px-sm py-xs rounded-full font-label-sm text-label-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        4.8 (210+ Reviews)
+                    </div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Dr. Michael Ross</h3>
+<p class="font-label-md text-label-md text-secondary font-bold mb-md uppercase tracking-wider">Orthopedic Surgeon</p>
+<div class="space-y-sm mb-lg flex-grow">
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">work_history</span>
+<span class="text-body-md font-body-md">20+ Years Experience</span>
+</div>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">language</span>
+<span class="text-body-md font-body-md">English, German</span>
+</div>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">verified</span>
+<span class="text-body-md font-body-md">Stanford Medicine</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<button class="bg-surface-container-low text-primary py-sm rounded-xl font-label-md text-label-md font-bold hover:bg-surface-container transition-colors">
+                            Profile
+                        </button>
+<button class="bg-primary text-on-primary py-sm rounded-xl font-label-md text-label-md font-bold hover:opacity-90 transition-opacity">
+                            Book
+                        </button>
+</div>
+</div>
+</div>
+<!-- Doctor Card 4 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden doctor-card-shadow border border-outline-variant/30 flex flex-col group transition-all duration-300 hover:-translate-y-1">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A portrait of a confident female neurologist standing in a modern lab environment. She is wearing a white medical lab coat and has a professional, calm expression. The background features blurred medical monitors and glass dividers, lit with clinical precision and cool blue tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpLwPbyW1UOgQstavQFWrUxD3IAOF_hHp1YNs4YXvQDo6MMcRbWX7DngGJeatvn8Gokj4YdpF6PBBOJ3lPgMVSmpm1HQxlo61pmgk_nomzMZyUl2Mg94FTE0PO4Pv1KpKAob5trVfH3Edxnq9m5K7vK6F13YuQ0b2siPxf3GPi_7AFjtDYsk_99GV3QDrIcvblojz3GNdh4M_utuv6GXYSWQSwswabh3FY_mL17Ms0nmVOteaoZqmhXTrp-mifLjOOCASeHQcH50A"/>
+<div class="absolute top-sm right-sm bg-secondary-container/90 backdrop-blur-sm text-on-secondary-container px-sm py-xs rounded-full font-label-sm text-label-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        4.9 (92+ Reviews)
+                    </div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Dr. Elena Rodriguez</h3>
+<p class="font-label-md text-label-md text-secondary font-bold mb-md uppercase tracking-wider">Neurologist</p>
+<div class="space-y-sm mb-lg flex-grow">
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">work_history</span>
+<span class="text-body-md font-body-md">10+ Years Experience</span>
+</div>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">language</span>
+<span class="text-body-md font-body-md">English, Spanish, Italian</span>
+</div>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline">verified</span>
+<span class="text-body-md font-body-md">Mayo Clinic College</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<button class="bg-surface-container-low text-primary py-sm rounded-xl font-label-md text-label-md font-bold hover:bg-surface-container transition-colors">
+                            Profile
+                        </button>
+<button class="bg-primary text-on-primary py-sm rounded-xl font-label-md text-label-md font-bold hover:opacity-90 transition-opacity">
+                            Book
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-xl flex flex-col items-center gap-md">
+<button class="flex items-center gap-sm px-lg py-sm bg-surface-container-high text-primary rounded-xl font-label-md text-label-md font-bold hover:bg-surface-container-highest transition-colors">
+                Load More Specialists
+                <span class="material-symbols-outlined">expand_more</span>
+</button>
+<p class="font-label-sm text-label-sm text-outline">Showing 4 of 128 specialists</p>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="bg-on-surface text-surface border-t border-outline-variant/20 mt-xl">
+<div class="w-full px-lg py-xl flex flex-col md:flex-row justify-between items-start gap-gutter max-w-container-max mx-auto">
+<div class="max-w-xs">
+<div class="font-headline-md text-headline-md font-bold text-surface mb-md">AMR Hospital</div>
+<p class="font-body-md text-body-md opacity-80 mb-lg">
+                    Providing clinical excellence and compassionate care to our community with state-of-the-art facilities and world-renowned specialists.
+                </p>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-lg w-full md:w-auto">
+<div class="flex flex-col gap-sm">
+<p class="font-label-md text-label-md font-bold text-secondary-fixed">Quick Links</p>
+<a class="font-label-sm text-label-sm opacity-80 hover:underline decoration-secondary transition-all" href="#">About Us</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:underline decoration-secondary transition-all" href="#">Careers</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:underline decoration-secondary transition-all" href="#">News</a>
+</div>
+<div class="flex flex-col gap-sm">
+<p class="font-label-md text-label-md font-bold text-secondary-fixed">Support</p>
+<a class="font-label-sm text-label-sm opacity-80 hover:underline decoration-secondary transition-all" href="#">Contact Details</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:underline decoration-secondary transition-all" href="#">Patient Portal</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:underline decoration-secondary transition-all" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-sm">
+<p class="font-label-md text-label-md font-bold text-secondary-fixed">Emergency</p>
+<a class="font-label-sm text-label-sm opacity-80 hover:underline decoration-secondary transition-all" href="#">Emergency Info</a>
+<a class="font-label-sm text-label-sm opacity-80 hover:underline decoration-secondary transition-all" href="#">Ambulance Services</a>
+<div class="mt-sm flex gap-xs items-center text-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="font-headline-md">911</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-lg py-md border-t border-outline-variant/10 text-center md:text-left">
+<p class="font-label-sm text-label-sm opacity-60">© 2024 AMR Hospital. Clinical Excellence &amp; Compassionate Care.</p>
+</div>
+</footer>
+</body></html>

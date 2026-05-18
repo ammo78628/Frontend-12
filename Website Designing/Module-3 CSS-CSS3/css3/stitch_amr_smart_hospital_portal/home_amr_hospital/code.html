@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#0b1c30",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#341100",
+                    "secondary-container": "#86f2e4",
+                    "surface": "#f8f9ff",
+                    "inverse-surface": "#213145",
+                    "background": "#f8f9ff",
+                    "surface-bright": "#f8f9ff",
+                    "outline-variant": "#c5c5d3",
+                    "surface-container": "#e5eeff",
+                    "surface-container-highest": "#d3e4fe",
+                    "inverse-primary": "#b6c4ff",
+                    "secondary": "#006a61",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "outline": "#757682",
+                    "on-primary-fixed": "#00164e",
+                    "primary": "#00236f",
+                    "on-secondary-container": "#006f66",
+                    "primary-container": "#1e3a8a",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "secondary-fixed": "#89f5e7",
+                    "on-tertiary-fixed-variant": "#773205",
+                    "secondary-fixed-dim": "#6bd8cb",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#444651",
+                    "on-tertiary-container": "#f39461",
+                    "surface-container-high": "#dce9ff",
+                    "tertiary-container": "#6e2c00",
+                    "tertiary-fixed": "#ffdbcb",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#4b1c00",
+                    "on-secondary-fixed-variant": "#005049",
+                    "tertiary-fixed-dim": "#ffb691",
+                    "on-primary-container": "#90a8ff",
+                    "primary-fixed": "#dce1ff",
+                    "surface-tint": "#4059aa",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "on-background": "#0b1c30",
+                    "on-primary-fixed-variant": "#264191",
+                    "on-secondary-fixed": "#00201d",
+                    "surface-variant": "#d3e4fe",
+                    "surface-dim": "#cbdbf5",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["30px", {"lineHeight": "38px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e5eeff 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant shadow-sm w-full">
+<nav class="flex justify-between items-center px-lg py-md w-full max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary">AMR Hospital</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Doctors</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Staff</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Appointment Booking</a>
+</div>
+<div class="flex items-center gap-base">
+<button class="bg-surface-container-low hover:bg-surface-container-highest/10 transition-all duration-200 px-sm py-xs rounded-lg text-primary font-label-md text-label-md hidden sm:block">Patient Portal</button>
+<button class="bg-primary text-on-primary px-md py-xs rounded-lg font-label-md text-label-md active:opacity-80 active:scale-95 transition-transform">Emergency</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="hero-gradient min-h-[819px] flex items-center relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-lg grid grid-cols-1 md:grid-cols-12 gap-gutter items-center py-xl">
+<div class="md:col-span-6 z-10">
+<span class="inline-block px-sm py-xs bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm mb-md">
+                        World-Class Healthcare Solutions
+                    </span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">Advancing Care through Excellence and Compassion</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-lg">
+                        AMR Hospital combines state-of-the-art medical technology with personalized care to ensure the best possible outcomes for our patients and their families.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary text-on-primary px-lg py-md rounded-xl font-label-md text-label-md shadow-lg flex items-center gap-base hover:opacity-90 transition-opacity">
+                            Book Appointment
+                            <span class="material-symbols-outlined">calendar_today</span>
+</button>
+<button class="border border-outline text-primary px-lg py-md rounded-xl font-label-md text-label-md hover:bg-surface-container transition-colors flex items-center gap-base">
+                            View Departments
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-6 relative h-[400px] md:h-[600px] mt-lg md:mt-0">
+<div class="absolute inset-0 bg-secondary/10 rounded-[40px] transform rotate-3 scale-105"></div>
+<img alt="Healthcare Excellence" class="w-full h-full object-cover rounded-[40px] shadow-2xl relative z-10" data-alt="A professional medical environment featuring a compassionate female doctor in a white lab coat talking to an elderly patient in a brightly lit, modern hospital ward. The lighting is soft and natural, emphasizing a serene and empathetic atmosphere. The background shows blurred clinical equipment in a clean, minimalist setting, adhering to a high-end corporate healthcare aesthetic with soft blue and white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0y5tGGMHfoz8mYpKqWMyXHFnSwjX_UbSzknp5F6WIqPxATKJ4vORKNCkIIyaU32ravsBOUwz8L2ouQpZ_9EZRrwhBqH7YolqgKnclAdWWVS39qX2aX8any0iNH8pRdIeMHTCgKcEhFVNuLLYDyXqISUdAAi5WTfT_0435fGQHlAwdQLoTowaq7TmDZD21hMyf3v3R--lBTUGLJwaEl5GiErDHoDRizRWH_o57CN5JA45Mzf6fr83kF8POVgCoY4FOrdKp18Sk_dU"/>
+</div>
+</div>
+</section>
+<!-- Our Excellence - Bento Grid -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Our Medical Excellence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Specialized care across all major clinical departments</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-gutter h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container rounded-2xl p-lg flex flex-col justify-end relative overflow-hidden shadow-sm group">
+<img alt="Advanced Surgery" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-500" data-alt="A close-up, high-detail photograph of a high-tech robotic surgery system in a sterile operating room. The lighting is clinical and cool-toned, highlighting the precision of the medical machinery. Metallic surfaces reflect soft overhead lights, creating a sense of advanced technology and safety. The overall color palette is dominated by sterile whites and clinical blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXlwQac7QigbA7c2COKuLKVEOTWH1tyE3W-1Xdo02F0pjX0PjdeDwsrXAbM7alAzMLGMYubbH3Kl1eWTUdPl-dtNNzU69BEMpP2Jhz4HTbTsecRPEce6tOv5ed0fGqb4q2jS2rc5Du5jEmlkpaDbDzfoWFRdNwK6g6C50mTSPqg7MQNYzXpurezNOTyKP5_J2pvvEPbpmaGq_FF1Sak7dAObXAjsFWRmdSvKX73GCKObdJG11KgbvhxJfnLE2YgzD66ZQiHXzG9U0"/>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-[48px] mb-md">precision_manufacturing</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs">Advanced Cardiology</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Pioneering heart care with robotic-assisted surgery and comprehensive diagnostics.</p>
+<button class="text-primary font-bold flex items-center gap-xs">Learn more <span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container-high rounded-2xl p-lg flex items-center gap-md shadow-sm">
+<div class="w-24 h-24 rounded-xl bg-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[40px]">neurology</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Neurology</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Expert treatment for complex brain and spinal cord conditions.</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-lg flex flex-col justify-between shadow-sm border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-[32px]">child_care</span>
+<h3 class="font-label-md text-label-md font-bold text-on-surface mt-md">Pediatrics</h3>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-lg flex flex-col justify-between shadow-sm border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-[32px]">biotech</span>
+<h3 class="font-label-md text-label-md font-bold text-on-surface mt-md">Oncology</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Emergency Care - High Impact -->
+<section class="py-xl bg-on-surface text-surface relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-lg relative z-10">
+<div class="bg-primary-container p-lg md:p-xl rounded-[32px] flex flex-col md:flex-row items-center justify-between gap-xl">
+<div class="max-w-xl">
+<div class="flex items-center gap-sm text-secondary-fixed mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<span class="font-label-md text-label-md tracking-widest uppercase">Emergency Response 24/7</span>
+</div>
+<h2 class="font-display-lg text-display-lg mb-md">Minutes Matter. We're Always Ready.</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-lg">
+                            Our Level 1 Trauma Center is equipped with immediate life-saving technology and staffed by expert emergency physicians around the clock.
+                        </p>
+<div class="flex items-center gap-lg">
+<div>
+<span class="font-display-lg text-display-lg block">99.8%</span>
+<span class="font-label-sm text-label-sm opacity-80">Survival Rate</span>
+</div>
+<div class="h-12 w-px bg-white/20"></div>
+<div>
+<span class="font-display-lg text-display-lg block">&lt;10m</span>
+<span class="font-label-sm text-label-sm opacity-80">Avg. Wait Time</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-md w-full md:w-auto">
+<a class="bg-error text-white px-lg py-lg rounded-2xl flex items-center justify-center gap-md font-headline-md shadow-xl hover:scale-105 transition-transform" href="tel:+1800-EMERGENCY">
+<span class="material-symbols-outlined">call</span>
+                            Emergency: 911
+                        </a>
+<button class="bg-white text-primary px-lg py-md rounded-2xl font-label-md text-label-md flex items-center justify-center gap-base">
+                            Find Nearest Center
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Patient Testimonials - Glassmorphism -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xl text-center">Patient Stories</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-white/40 backdrop-blur-md border border-outline-variant p-md rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-md mb-md">
+<img alt="Sarah J." class="w-12 h-12 rounded-full object-cover" data-alt="A professional portrait of a smiling middle-aged woman in a bright, modern setting. She has a look of gratitude and health, wearing casual but clean attire. The lighting is warm and bright, conveying a sense of happiness and recovery. The background is a softly out-of-focus modern living space with natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWl9uBllog90jaF7GAgYs8wfMDeI0rE0F87FhylG8xVledVdCFyb5Ga3_3NFd-3Va9ezDZkvOM9mRUZDO2yTtNrlOGSg6Rg0T8Br7K0DkcftOT-mpKvZTtQDr5yqkVe1uJ5fim8-NeEWFlVb9_whhh8zzZE2IeMDQs0cNV3--WJCpJRCo1sA775UTT5rh1Q3FmPpxO8-E7VZysmV7lMiWIgvqCM3psTNj-swVJOxp6WcGUO_n7Jn4FMgy99017Wp0ocway9ViVqwM"/>
+<div>
+<div class="font-label-md text-label-md font-bold">Sarah Jenkins</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Cardiology Patient</div>
+</div>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface-variant">"The level of care I received at AMR Hospital was beyond my expectations. The staff treated me like family and the technology they used for my procedure was truly world-class."</p>
+<div class="mt-md flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white/40 backdrop-blur-md border border-outline-variant p-md rounded-2xl shadow-sm hover:shadow-md transition-shadow scale-105 z-10 ring-2 ring-primary/5">
+<div class="flex items-center gap-md mb-md">
+<img alt="Michael R." class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of a mature man with a friendly, confident expression. He is wearing a sharp, navy blue business suit, looking directly at the camera. The background is a minimalist office setting with clean lines and soft lighting, suggesting a professional and stable lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX1AHDEWYBNvvQy0Ht_hMRg_gk1_TMrk9o2kM9ILlxttGTnzqmt5NIsU5w54kRQ9knZcX1W_0v6WxWQ5oN0htgqMi-SnzZnBuEqZN9pa3NsZ9wq_oZgB_NSYenHYhO_puurMs7penD5GnQeCJf8eZhpr7miQ94ddBqTE_4j2q51nv_nSkTrCsi70OV1lWEc1ZMsePjovbEU70bNoAuxq_vkl-w3BqH-SNnyt7i9YvVhlpruwrbalLBMvLX6A8CiG9BNGCEEk9jZ8o"/>
+<div>
+<div class="font-label-md text-label-md font-bold">Michael Reed</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Neurology Patient</div>
+</div>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface-variant">"The surgeons here are magicians. I was back on my feet faster than anyone predicted. Truly thankful for the expertise and the kindness shown by everyone from the nurses to the specialists."</p>
+<div class="mt-md flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white/40 backdrop-blur-md border border-outline-variant p-md rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-md mb-md">
+<img alt="Elena T." class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of a young woman with a calm and peaceful expression, sitting in a bright room with green plants in the background. The lighting is diffused and soft, creating a warm, approachable look. The color palette is natural, with greens, whites, and soft skin tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD16e8Y9kGHl3LgzYYGaNAcEY_SKFUomPMKgb8Lhc3D26ahz6KraVO8QZLejLb0shKc_7vWQsqe4kB9-QjUinqpnPUjfOMAWKO9Vs-s4CrebHR416c0mq14F4FXTngPgwTf9gQphjcDjLGN9VORqvhEJrsW-EUmsNJT1zCN5xBLAa2NE1qcHq48cZPVduatN_iEwEvibm3Rqoy7wNq9119fbHeTC_STtfjH03MbL43YAM7b_DC_jRnfHxEhxaWafQRuh0sOd_pmQss"/>
+<div>
+<div class="font-label-md text-label-md font-bold">Elena Thompson</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Maternity Patient</div>
+</div>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface-variant">"The maternity ward at AMR is peaceful and supportive. The nurses were incredibly helpful during my first week with my newborn. I couldn't have asked for a better environment."</p>
+<div class="mt-md flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest News -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Medical Insights</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Keeping you informed on the latest healthcare trends</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-xs">View all news <span class="material-symbols-outlined">arrow_outward</span></button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<article class="group cursor-pointer">
+<div class="aspect-video overflow-hidden rounded-2xl mb-md">
+<img alt="Medical News" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up of a modern research laboratory with clinical scientists wearing protective gear, working with high-precision microscopes and glass vials. The lighting is bright and even, casting minimal shadows. The lab is filled with advanced medical equipment in a clean white and blue color scheme, reflecting a high-end medical research environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-XSh-vGPigF6NMqA53Ak1pNh3wbt094dV7qq1rCxH7EbUNcUZPuJePsEAoZUlaRgtnMeQHzU7RBbyBK2VwhcUPBT4cZembWOPyTGNB7U3jJBxy4PWVoPqKoNos31WUqQDZt9tf7iqFqQEmvdadkhkghbEkb6P6SuZK4syxRkEukesjyYaYbu3Tf4wQpzhaudAJIASBorKKWzsJJAh9PWKNJ2Ct1LOLVK7j246sCn7xZBoYFh8QEPSxwtTOl_Uw66eWWO0Pmd2Bbc"/>
+</div>
+<div class="flex gap-base mb-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Research</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 24, 2024</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Breakthroughs in Precision Oncology</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">How DNA sequencing is revolutionizing personalized cancer treatment plans at AMR Hospital.</p>
+</article>
+<article class="group cursor-pointer">
+<div class="aspect-video overflow-hidden rounded-2xl mb-md">
+<img alt="Wellness" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A wide-angle interior shot of a futuristic hospital lobby with expansive glass walls, high ceilings, and lush indoor greenery. The architectural style is modern corporate, emphasizing light and space. People are seen comfortably seated in ergonomic furniture in a peaceful environment. The lighting is airy and bright, using a clean color palette of whites, teals, and soft blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvPe9h56RkNj9BRirSwDsAvcyWhNH4ap_hRl6hWCYDqd-KiobjSmr77-y_I2RalKL-WSBuqAGmaoQRZv5wHTtgwjczvkdN3iX-K1WgYmvv5LHMz7IRQ7KWh8udy56ec61dS6QpLxhfFDvYzmLwdm3E2Cv60c8d5VJokeKjZ8437P0ciOSKL6WtYU6xKfkEShi_39ZKJfo8jcS-sw3Mir17CIjV3mXzlOWVrlnK4NVPRZ0m8L4nIzs7Z8ct7HMw8f3o3YppofaK9TQ"/>
+</div>
+<div class="flex gap-base mb-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Wellness</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 20, 2024</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">Integrative Health &amp; Mental Wellness</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The importance of holistic care approaches in recovering from chronic illnesses.</p>
+</article>
+<article class="group cursor-pointer">
+<div class="aspect-video overflow-hidden rounded-2xl mb-md">
+<img alt="Innovation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A clean, high-tech patient monitoring station in a modern hospital room. A high-resolution screen displays clear, colorful vital signs and medical data. The background shows a portion of a clean, comfortable patient bed with soft linen. The overall mood is clinical yet reassuringly advanced, using a palette of white, light gray, and primary blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBll5X1qJ82ZTdUrfX293QQAixmq4miM36WI6tHD3869yXwict8d-eXKqkwovZKiY8JR98GjhFd7rApMGl3Vq3MYEsihktaIzyoBv0XAtpMnp9y9WkJa0NKpqrPp0_daZYbLBHgsFyVz2RMLcCEVZLxi6YWLd1GY-YH15oELzMjT5piyCLoa8Q9RW7pQ9yLYdWR4wuRrGEDsdt8wSD7wcLUcy-Nq8z7QzXlIFgoo6x2Q0kuZ1TKY4aj_zK-GlStVvckE2cVMCg73GU"/>
+</div>
+<div class="flex gap-base mb-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Innovation</span>
+<span class="font-label-sm text-label-sm text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oct 15, 2024</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs group-hover:text-primary transition-colors">AI-Powered Diagnostic Imaging</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Implementing artificial intelligence to increase the accuracy and speed of MRI interpretations.</p>
+</article>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface text-surface border-t border-outline-variant/20 w-full">
+<div class="w-full px-lg py-xl flex flex-col md:flex-row justify-between items-start gap-gutter max-w-container-max mx-auto">
+<div class="max-w-xs">
+<div class="font-headline-md text-headline-md font-bold text-surface mb-md">AMR Hospital</div>
+<p class="font-body-md text-body-md text-surface-variant/80 mb-lg">
+                    Clinical Excellence &amp; Compassionate Care. Providing leading medical solutions for our community since 1995.
+                </p>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-xl">
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-md uppercase tracking-wider">Quick Links</h4>
+<ul class="flex flex-col gap-sm">
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-surface transition-colors hover:underline decoration-secondary" href="#">Doctors</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-surface transition-colors hover:underline decoration-secondary" href="#">Departments</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-surface transition-colors hover:underline decoration-secondary" href="#">Appointments</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-surface transition-colors hover:underline decoration-secondary" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-md uppercase tracking-wider">Resources</h4>
+<ul class="flex flex-col gap-sm">
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-surface transition-colors hover:underline decoration-secondary" href="#">Patient Portal</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-surface transition-colors hover:underline decoration-secondary" href="#">Emergency Info</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-surface transition-colors hover:underline decoration-secondary" href="#">Privacy Policy</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant/80 hover:text-surface transition-colors hover:underline decoration-secondary" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<h4 class="font-label-md text-label-md font-bold mb-md uppercase tracking-wider">Contact Us</h4>
+<p class="font-label-sm text-label-sm text-surface-variant/80 mb-xs">123 Clinical Drive, Metro City</p>
+<p class="font-label-sm text-label-sm text-surface-variant/80 mb-xs">P: (555) 000-1111</p>
+<p class="font-label-sm text-label-sm text-surface-variant/80">E: care@amrhospital.com</p>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-lg py-md border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-base">
+<p class="font-label-sm text-label-sm text-surface-variant/60">© 2024 AMR Hospital. Clinical Excellence &amp; Compassionate Care.</p>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm text-surface-variant/60">Accredited Healthcare Provider</span>
+</div>
+</div>
+</footer>
+</body></html>
