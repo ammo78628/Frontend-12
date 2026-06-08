@@ -1,0 +1,42 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+ul li{
+    list-style-type: none;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.searchbox{
+    margin-left: 15%;
+    width: 30%;
+    font-size: smaller;
+}
+.put{
+    outline: none;
+}
+.buttons{
+    text-align: center;
+}
+.icons{
+    margin-left: 50px;
+    height: 40px;
+    position: relative;
+    
+}
+.icons1::after{
+    font-size: smaller;
+    font-weight: bolder;
+    content: 'Wishlist';
+    position: absolute;
+    bottom: 2px;
+    left: -15px;
+}
+.icons2::after{
+    font-size: smaller;
+    font-weight: bolder;
+    content: 'Bag';
+    position: absolute;
+    bottom: 0px;
+    left: -2px;
+}
