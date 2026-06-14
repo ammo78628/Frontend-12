@@ -1,0 +1,2927 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image -->
+<html lang="en" class="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="ace-monokai">.ace-monokai .ace_gutter {
+  background: #2F3129;
+  color: #8F908A
+}
+
+.ace-monokai .ace_print-margin {
+  width: 1px;
+  background: #555651
+}
+
+.ace-monokai {
+  background-color: #272822;
+  color: #F8F8F2
+}
+
+.ace-monokai .ace_cursor {
+  color: #F8F8F0
+}
+
+.ace-monokai .ace_marker-layer .ace_selection {
+  background: #49483E
+}
+
+.ace-monokai.ace_multiselect .ace_selection.ace_start {
+  box-shadow: 0 0 3px 0px #272822;
+}
+
+.ace-monokai .ace_marker-layer .ace_step {
+  background: rgb(102, 82, 0)
+}
+
+.ace-monokai .ace_marker-layer .ace_bracket {
+  margin: -1px 0 0 -1px;
+  border: 1px solid #49483E
+}
+
+.ace-monokai .ace_marker-layer .ace_active-line {
+  background: #202020
+}
+
+.ace-monokai .ace_gutter-active-line {
+  background-color: #272727
+}
+
+.ace-monokai .ace_marker-layer .ace_selected-word {
+  border: 1px solid #49483E
+}
+
+.ace-monokai .ace_invisible {
+  color: #52524d
+}
+
+.ace-monokai .ace_entity.ace_name.ace_tag,
+.ace-monokai .ace_keyword,
+.ace-monokai .ace_meta.ace_tag,
+.ace-monokai .ace_storage {
+  color: #F92672
+}
+
+.ace-monokai .ace_punctuation,
+.ace-monokai .ace_punctuation.ace_tag {
+  color: #fff
+}
+
+.ace-monokai .ace_constant.ace_character,
+.ace-monokai .ace_constant.ace_language,
+.ace-monokai .ace_constant.ace_numeric,
+.ace-monokai .ace_constant.ace_other {
+  color: #AE81FF
+}
+
+.ace-monokai .ace_invalid {
+  color: #F8F8F0;
+  background-color: #F92672
+}
+
+.ace-monokai .ace_invalid.ace_deprecated {
+  color: #F8F8F0;
+  background-color: #AE81FF
+}
+
+.ace-monokai .ace_support.ace_constant,
+.ace-monokai .ace_support.ace_function {
+  color: #66D9EF
+}
+
+.ace-monokai .ace_fold {
+  background-color: #A6E22E;
+  border-color: #F8F8F2
+}
+
+.ace-monokai .ace_storage.ace_type,
+.ace-monokai .ace_support.ace_class,
+.ace-monokai .ace_support.ace_type {
+  font-style: italic;
+  color: #66D9EF
+}
+
+.ace-monokai .ace_entity.ace_name.ace_function,
+.ace-monokai .ace_entity.ace_other,
+.ace-monokai .ace_entity.ace_other.ace_attribute-name,
+.ace-monokai .ace_variable {
+  color: #A6E22E
+}
+
+.ace-monokai .ace_variable.ace_parameter {
+  font-style: italic;
+  color: #FD971F
+}
+
+.ace-monokai .ace_string {
+  color: #E6DB74
+}
+
+.ace-monokai .ace_comment {
+  color: #75715E
+}
+
+.ace-monokai .ace_indent-guide {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ0FD0ZXBzd/wPAAjVAoxeSgNeAAAAAElFTkSuQmCC) right repeat-y
+}
+
+.ace-monokai .ace_indent-guide-active {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQIW2PQ1dX9zzBz5sz/ABCcBFFentLlAAAAAElFTkSuQmCC) right repeat-y;
+}
+
+/*# sourceURL=ace/css/ace-monokai */</style><style id="error_marker.css">
+    .error_widget_wrapper {
+        background: inherit;
+        color: inherit;
+        border:none
+    }
+    .error_widget {
+        border-top: solid 2px;
+        border-bottom: solid 2px;
+        margin: 5px 0;
+        padding: 10px 40px;
+        white-space: pre-wrap;
+    }
+    .error_widget.ace_error, .error_widget_arrow.ace_error{
+        border-color: #ff5a5a
+    }
+    .error_widget.ace_warning, .error_widget_arrow.ace_warning{
+        border-color: #F1D817
+    }
+    .error_widget.ace_info, .error_widget_arrow.ace_info{
+        border-color: #5a5a5a
+    }
+    .error_widget.ace_ok, .error_widget_arrow.ace_ok{
+        border-color: #5aaa5a
+    }
+    .error_widget_arrow {
+        position: absolute;
+        border: solid 5px;
+        border-top-color: transparent!important;
+        border-right-color: transparent!important;
+        border-left-color: transparent!important;
+        top: -5px;
+    }
+
+/*# sourceURL=ace/css/error_marker.css */</style><style id="ace-tm">.ace-tm .ace_gutter {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.ace-tm .ace_print-margin {
+  width: 1px;
+  background: #e8e8e8;
+}
+
+.ace-tm .ace_fold {
+    background-color: #6B72E6;
+}
+
+.ace-tm {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.ace-tm .ace_cursor {
+  color: black;
+}
+        
+.ace-tm .ace_invisible {
+  color: rgb(191, 191, 191);
+}
+
+.ace-tm .ace_storage,
+.ace-tm .ace_keyword {
+  color: blue;
+}
+
+.ace-tm .ace_constant {
+  color: rgb(197, 6, 11);
+}
+
+.ace-tm .ace_constant.ace_buildin {
+  color: rgb(88, 72, 246);
+}
+
+.ace-tm .ace_constant.ace_language {
+  color: rgb(88, 92, 246);
+}
+
+.ace-tm .ace_constant.ace_library {
+  color: rgb(6, 150, 14);
+}
+
+.ace-tm .ace_invalid {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: red;
+}
+
+.ace-tm .ace_support.ace_function {
+  color: rgb(60, 76, 114);
+}
+
+.ace-tm .ace_support.ace_constant {
+  color: rgb(6, 150, 14);
+}
+
+.ace-tm .ace_support.ace_type,
+.ace-tm .ace_support.ace_class {
+  color: rgb(109, 121, 222);
+}
+
+.ace-tm .ace_keyword.ace_operator {
+  color: rgb(104, 118, 135);
+}
+
+.ace-tm .ace_string {
+  color: rgb(3, 106, 7);
+}
+
+.ace-tm .ace_comment {
+  color: rgb(76, 136, 107);
+}
+
+.ace-tm .ace_comment.ace_doc {
+  color: rgb(0, 102, 255);
+}
+
+.ace-tm .ace_comment.ace_doc.ace_tag {
+  color: rgb(128, 159, 191);
+}
+
+.ace-tm .ace_constant.ace_numeric {
+  color: rgb(0, 0, 205);
+}
+
+.ace-tm .ace_variable {
+  color: rgb(49, 132, 149);
+}
+
+.ace-tm .ace_xml-pe {
+  color: rgb(104, 104, 91);
+}
+
+.ace-tm .ace_entity.ace_name.ace_function {
+  color: #0000A2;
+}
+
+
+.ace-tm .ace_heading {
+  color: rgb(12, 7, 255);
+}
+
+.ace-tm .ace_list {
+  color:rgb(185, 6, 144);
+}
+
+.ace-tm .ace_meta.ace_tag {
+  color:rgb(0, 22, 142);
+}
+
+.ace-tm .ace_string.ace_regex {
+  color: rgb(255, 0, 0)
+}
+
+.ace-tm .ace_marker-layer .ace_selection {
+  background: rgb(181, 213, 255);
+}
+.ace-tm.ace_multiselect .ace_selection.ace_start {
+  box-shadow: 0 0 3px 0px white;
+}
+.ace-tm .ace_marker-layer .ace_step {
+  background: rgb(252, 255, 0);
+}
+
+.ace-tm .ace_marker-layer .ace_stack {
+  background: rgb(164, 229, 101);
+}
+
+.ace-tm .ace_marker-layer .ace_bracket {
+  margin: -1px 0 0 -1px;
+  border: 1px solid rgb(192, 192, 192);
+}
+
+.ace-tm .ace_marker-layer .ace_active-line {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.ace-tm .ace_gutter-active-line {
+    background-color : #dcdcdc;
+}
+
+.ace-tm .ace_marker-layer .ace_selected-word {
+  background: rgb(250, 250, 255);
+  border: 1px solid rgb(200, 200, 250);
+}
+
+.ace-tm .ace_indent-guide {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;
+}
+
+.ace-tm .ace_indent-guide-active {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAZSURBVHjaYvj///9/hivKyv8BAAAA//8DACLqBhbvk+/eAAAAAElFTkSuQmCC") right repeat-y;
+}
+
+/*# sourceURL=ace/css/ace-tm */</style><style id="ace_editor.css">
+.ace_br1 {border-top-left-radius    : 3px;}
+.ace_br2 {border-top-right-radius   : 3px;}
+.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}
+.ace_br4 {border-bottom-right-radius: 3px;}
+.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}
+.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}
+.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}
+.ace_br8 {border-bottom-left-radius : 3px;}
+.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}
+.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}
+.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}
+.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}
+.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}
+.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}
+.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+
+
+.ace_editor {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Source Code Pro', 'source-code-pro', monospace;
+    direction: ltr;
+    text-align: left;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    forced-color-adjust: none;
+}
+
+.ace_scroller {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    background-color: inherit;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: text;
+}
+
+.ace_content {
+    position: absolute;
+    box-sizing: border-box;
+    min-width: 100%;
+    contain: style size layout;
+    font-variant-ligatures: no-common-ligatures;
+}
+
+.ace_keyboard-focus:focus {
+    box-shadow: inset 0 0 0 2px #5E9ED6;
+    outline: none;
+}
+
+.ace_dragging .ace_scroller:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: rgba(250, 250, 250, 0.01);
+    z-index: 1000;
+}
+.ace_dragging.ace_dark .ace_scroller:before{
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.ace_gutter {
+    position: absolute;
+    overflow : hidden;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    cursor: default;
+    z-index: 4;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    contain: style size layout;
+}
+
+.ace_gutter-active-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.ace_scroller.ace_scroll-left:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;
+    pointer-events: none;
+}
+
+.ace_gutter-cell, .ace_gutter-cell_svg-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 19px;
+    padding-right: 6px;
+    background-repeat: no-repeat;
+}
+
+.ace_gutter-cell_svg-icons .ace_gutter_annotation {
+    margin-left: -14px;
+    float: left;
+}
+
+.ace_gutter-cell .ace_gutter_annotation {
+    margin-left: -19px;
+    float: left;
+}
+
+.ace_gutter-cell.ace_error, .ace_icon.ace_error, .ace_icon.ace_error_fold, .ace_gutter-cell.ace_security, .ace_icon.ace_security, .ace_icon.ace_security_fold {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+
+.ace_gutter-cell.ace_warning, .ace_icon.ace_warning, .ace_icon.ace_warning_fold {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+
+.ace_gutter-cell.ace_info, .ace_icon.ace_info, .ace_gutter-cell.ace_hint, .ace_icon.ace_hint {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");
+    background-repeat: no-repeat;
+    background-position: 2px center;
+}
+
+.ace_dark .ace_gutter-cell.ace_info, .ace_dark .ace_icon.ace_info, .ace_dark .ace_gutter-cell.ace_hint, .ace_dark .ace_icon.ace_hint {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");
+}
+
+.ace_icon_svg.ace_error {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJyZWQiIHNoYXBlLXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIj4KPGNpcmNsZSBmaWxsPSJub25lIiBjeD0iOCIgY3k9IjgiIHI9IjciIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGxpbmUgeDE9IjExIiB5MT0iNSIgeDI9IjUiIHkyPSIxMSIvPgo8bGluZSB4MT0iMTEiIHkxPSIxMSIgeDI9IjUiIHkyPSI1Ii8+CjwvZz4KPC9zdmc+");
+    background-color: crimson;
+}
+.ace_icon_svg.ace_security {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZyBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iZGFya29yYW5nZSIgZmlsbD0ibm9uZSIgc2hhcGUtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iPgogICAgICAgIDxwYXRoIGNsYXNzPSJzdHJva2UtbGluZWpvaW4tcm91bmQiIGQ9Ik04IDE0LjgzMDdDOCAxNC44MzA3IDIgMTIuOTA0NyAyIDguMDg5OTJWMy4yNjU0OEM1LjMxIDMuMjY1NDggNy45ODk5OSAxLjM0OTE4IDcuOTg5OTkgMS4zNDkxOEM3Ljk4OTk5IDEuMzQ5MTggMTAuNjkgMy4yNjU0OCAxNCAzLjI2NTQ4VjguMDg5OTJDMTQgMTIuOTA0NyA4IDE0LjgzMDcgOCAxNC44MzA3WiIvPgogICAgICAgIDxwYXRoIGQ9Ik0yIDguMDg5OTJWMy4yNjU0OEM1LjMxIDMuMjY1NDggNy45ODk5OSAxLjM0OTE4IDcuOTg5OTkgMS4zNDkxOCIvPgogICAgICAgIDxwYXRoIGQ9Ik0xMy45OSA4LjA4OTkyVjMuMjY1NDhDMTAuNjggMy4yNjU0OCA4IDEuMzQ5MTggOCAxLjM0OTE4Ii8+CiAgICAgICAgPHBhdGggY2xhc3M9InN0cm9rZS1saW5lam9pbi1yb3VuZCIgZD0iTTggNFY5Ii8+CiAgICAgICAgPHBhdGggY2xhc3M9InN0cm9rZS1saW5lam9pbi1yb3VuZCIgZD0iTTggMTBWMTIiLz4KICAgIDwvZz4KPC9zdmc+");
+    background-color: crimson;
+}
+.ace_icon_svg.ace_warning {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJkYXJrb3JhbmdlIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+Cjxwb2x5Z29uIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiIHBvaW50cz0iOCAxIDE1IDE1IDEgMTUgOCAxIi8+CjxyZWN0IHg9IjgiIHk9IjEyIiB3aWR0aD0iMC4wMSIgaGVpZ2h0PSIwLjAxIi8+CjxsaW5lIHgxPSI4IiB5MT0iNiIgeDI9IjgiIHkyPSIxMCIvPgo8L2c+Cjwvc3ZnPg==");
+    background-color: darkorange;
+}
+.ace_icon_svg.ace_info {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJibHVlIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+CjxjaXJjbGUgZmlsbD0ibm9uZSIgY3g9IjgiIGN5PSI4IiByPSI3IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjxwb2x5bGluZSBwb2ludHM9IjggMTEgOCA4Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjkgOCA2IDgiLz4KPGxpbmUgeDE9IjEwIiB5MT0iMTEiIHgyPSI2IiB5Mj0iMTEiLz4KPHJlY3QgeD0iOCIgeT0iNSIgd2lkdGg9IjAuMDEiIGhlaWdodD0iMC4wMSIvPgo8L2c+Cjwvc3ZnPg==");
+    background-color: royalblue;
+}
+.ace_icon_svg.ace_hint {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZyBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0ic2lsdmVyIiBmaWxsPSJub25lIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+CiAgICAgICAgPHBhdGggY2xhc3M9InN0cm9rZS1saW5lam9pbi1yb3VuZCIgZD0iTTYgMTRIMTAiLz4KICAgICAgICA8cGF0aCBkPSJNOCAxMUg5QzkgOS40NzAwMiAxMiA4LjU0MDAyIDEyIDUuNzYwMDJDMTIuMDIgNC40MDAwMiAxMS4zOSAzLjM2MDAyIDEwLjQzIDIuNjcwMDJDOSAxLjY0MDAyIDcuMDAwMDEgMS42NDAwMiA1LjU3MDAxIDIuNjcwMDJDNC42MTAwMSAzLjM2MDAyIDMuOTggNC40MDAwMiA0IDUuNzYwMDJDNCA4LjU0MDAyIDcuMDAwMDEgOS40NzAwMiA3LjAwMDAxIDExSDhaIi8+CiAgICA8L2c+Cjwvc3ZnPg==");
+    background-color: silver;
+}
+
+.ace_icon_svg.ace_error_fold {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0ibSAxOC45Mjk4NTEsNy44Mjk4MDc2IGMgMC4xNDYzNTMsNi4zMzc0NjA0IC02LjMyMzE0Nyw3Ljc3Nzg0NDQgLTcuNDc3OTEyLDcuNzc3ODQ0NCAtMi4xMDcyNzI2LC0wLjEyODc1IDUuMTE3Njc4LDAuMzU2MjQ5IDUuMDUxNjk4LC03Ljg3MDA2MTggLTAuNjA0NjcyLC04LjAwMzk3MzQ5IC03LjA3NzI3MDYsLTcuNTYzMTE4OSAtNC44NTczLC03LjQzMDM5NTU2IDEuNjA2LC0wLjExNTE0MjI1IDYuODk3NDg1LDEuMjYyNTQ1OTYgNy4yODM1MTQsNy41MjI2MTI5NiB6IiBmaWxsPSJjcmltc29uIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibSA4LjExNDc1NjIsMi4wNTI5ODI4IGMgMy4zNDkxNjk4LDAgNi4wNjQxMzI4LDIuNjc2ODYyNyA2LjA2NDEzMjgsNS45Nzg5NTMgMCwzLjMwMjExMjIgLTIuNzE0OTYzLDUuOTc4OTIwMiAtNi4wNjQxMzI4LDUuOTc4OTIwMiAtMy4zNDkxNDczLDAgLTYuMDY0MTc3MiwtMi42NzY4MDggLTYuMDY0MTc3MiwtNS45Nzg5MjAyIDAuMDA1MzksLTMuMjk5ODg2MSAyLjcxNzI2NTYsLTUuOTczNjQwOCA2LjA2NDE3NzIsLTUuOTc4OTUzIHogbSAwLC0xLjczNTgyNzE5IGMgLTQuMzIxNDgzNiwwIC03LjgyNDc0MDM4LDMuNDU0MDE4NDkgLTcuODI0NzQwMzgsNy43MTQ3ODAxOSAwLDQuMjYwNzI4MiAzLjUwMzI1Njc4LDcuNzE0NzQ1MiA3LjgyNDc0MDM4LDcuNzE0NzQ1MiA0LjMyMTQ0OTgsMCA3LjgyNDY5OTgsLTMuNDU0MDE3IDcuODI0Njk5OCwtNy43MTQ3NDUyIDAsLTIuMDQ2MDkxNCAtMC44MjQzOTIsLTQuMDA4MzY3MiAtMi4yOTE3NTYsLTUuNDU1MTc0NiBDIDEyLjE4MDIyNSwxLjEyOTk2NDggMTAuMTkwMDEzLDAuMzE3MTU1NjEgOC4xMTQ3NTYyLDAuMzE3MTU1NjEgWiBNIDYuOTM3NDU2Myw4LjI0MDU5ODUgNC42NzE4Njg1LDEwLjQ4NTg1MiA2LjAwODY4MTQsMTEuODc2NzI4IDguMzE3MDAzNSw5LjYwMDc5MTEgMTAuNjI1MzM3LDExLjg3NjcyOCAxMS45NjIxMzgsMTAuNDg1ODUyIDkuNjk2NTUwOCw4LjI0MDU5ODUgMTEuOTYyMTM4LDYuMDA2ODA2NiAxMC41NzMyNDYsNC42Mzc0MzM1IDguMzE3MDAzNSw2Ljg3MzQyOTcgNi4wNjA3NjA3LDQuNjM3NDMzNSA0LjY3MTg2ODUsNi4wMDY4MDY2IFoiIGZpbGw9ImNyaW1zb24iIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=");
+    background-color: crimson;
+}
+.ace_icon_svg.ace_security_fold {
+    -webkit-mask-image: url("data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTcgMTQiIGZpbGw9Im5vbmUiPgogICAgPHBhdGggZD0iTTEwLjAwMDEgMTMuNjk5MkMxMC4wMDAxIDEzLjY5OTIgMTEuOTI0MSAxMy40NzYzIDEzIDEyLjY5OTJDMTQuNDEzOSAxMS42NzgxIDE2IDEwLjUgMTYuMTI1MSA2LjgxMTI2VjIuNTg5ODdDMTYuMTI1MSAyLjU0NzY4IDE2LjEyMjEgMi41MDYxOSAxNi4xMTY0IDIuNDY1NTlWMS43MTQ4NUgxNS4yNDE0TDE1LjIzMDcgMS43MTQ4NEwxNC42MjUxIDEuNjk5MjJWNi44MTEyM0MxNC42MjUxIDguNTEwNjEgMTQuNjI1MSA5LjQ2NDYxIDEyLjc4MjQgMTEuNzIxQzEyLjE1ODYgMTIuNDg0OCAxMC4wMDAxIDEzLjY5OTIgMTAuMDAwMSAxMy42OTkyWiIgZmlsbD0iY3JpbXNvbiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuMzM2MDkgMC4zNjc0NzVDNy4wMzIxNCAwLjE1MjY1MiA2LjYyNTQ4IDAuMTUzNjE0IDYuMzIyNTMgMC4zNjk5OTdMNi4zMDg2OSAwLjM3OTU1NEM2LjI5NTUzIDAuMzg4NTg4IDYuMjczODggMC40MDMyNjYgNi4yNDQxNyAwLjQyMjc4OUM2LjE4NDcxIDAuNDYxODYgNi4wOTMyMSAwLjUyMDE3MSA1Ljk3MzEzIDAuNTkxMzczQzUuNzMyNTEgMC43MzQwNTkgNS4zNzk5IDAuOTI2ODY0IDQuOTQyNzkgMS4xMjAwOUM0LjA2MTQ0IDEuNTA5NyAyLjg3NTQxIDEuODgzNzcgMS41ODk4NCAxLjg4Mzc3SDAuNzE0ODQ0VjIuNzU4NzdWNi45ODAxNUMwLjcxNDg0NCA5LjQ5Mzc0IDIuMjg4NjYgMTEuMTk3MyAzLjcwMjU0IDEyLjIxODVDNC40MTg0NSAxMi43MzU1IDUuMTI4NzQgMTMuMTA1MyA1LjY1NzMzIDEzLjM0NTdDNS45MjI4NCAxMy40NjY0IDYuMTQ1NjYgMTMuNTU1OSA2LjMwNDY1IDEzLjYxNjFDNi4zODQyMyAxMy42NDYyIDYuNDQ4MDUgMTMuNjY5IDYuNDkzNDkgMTMuNjg0OEM2LjUxNjIyIDEzLjY5MjcgNi41MzQzOCAxMy42OTg5IDYuNTQ3NjQgMTMuNzAzM0w2LjU2MzgyIDEzLjcwODdMNi41NjkwOCAxMy43MTA0TDYuNTcwOTkgMTMuNzExTDYuODM5ODQgMTMuNzUzM0w2LjU3MjQyIDEzLjcxMTVDNi43NDYzMyAxMy43NjczIDYuOTMzMzUgMTMuNzY3MyA3LjEwNzI3IDEzLjcxMTVMNy4xMDg3IDEzLjcxMUw3LjExMDYxIDEzLjcxMDRMNy4xMTU4NyAxMy43MDg3TDcuMTMyMDUgMTMuNzAzM0M3LjE0NTMxIDEzLjY5ODkgNy4xNjM0NiAxMy42OTI3IDcuMTg2MTkgMTMuNjg0OEM3LjIzMTY0IDEzLjY2OSA3LjI5NTQ2IDEzLjY0NjIgNy4zNzUwMyAxMy42MTYxQzcuNTM0MDMgMTMuNTU1OSA3Ljc1Njg1IDEzLjQ2NjQgOC4wMjIzNiAxMy4zNDU3QzguNTUwOTUgMTMuMTA1MyA5LjI2MTIzIDEyLjczNTUgOS45NzcxNSAxMi4yMTg1QzExLjM5MSAxMS4xOTczIDEyLjk2NDggOS40OTM3NyAxMi45NjQ4IDYuOTgwMThWMi43NTg4QzEyLjk2NDggMi43MTY2IDEyLjk2MTkgMi42NzUxMSAxMi45NTYxIDIuNjM0NTFWMS44ODM3N0gxMi4wODExQzEyLjA3NzUgMS44ODM3NyAxMi4wNzQgMS44ODM3NyAxMi4wNzA0IDEuODgzNzdDMTAuNzk3OSAxLjg4MDA0IDkuNjE5NjIgMS41MTEwMiA4LjczODk0IDEuMTI0ODZDOC43MzUzNCAxLjEyMzI3IDguNzMxNzQgMS4xMjE2OCA4LjcyODE0IDEuMTIwMDlDOC4yOTEwMyAwLjkyNjg2NCA3LjkzODQyIDAuNzM0MDU5IDcuNjk3NzkgMC41OTEzNzNDNy41Nzc3MiAwLjUyMDE3MSA3LjQ4NjIyIDAuNDYxODYgNy40MjY3NiAwLjQyMjc4OUM3LjM5NzA1IDAuNDAzMjY2IDcuMzc1MzkgMC4zODg1ODggNy4zNjIyNCAwLjM3OTU1NEw3LjM0ODk2IDAuMzcwMzVDNy4zNDg5NiAwLjM3MDM1IDcuMzQ4NDcgMC4zNzAwMiA3LjM0NTYzIDAuMzc0MDU0TDcuMzM3NzkgMC4zNjg2NTlMNy4zMzYwOSAwLjM2NzQ3NVpNOC4wMzQ3MSAyLjcyNjkxQzguODYwNCAzLjA5MDYzIDkuOTYwNjYgMy40NjMwOSAxMS4yMDYxIDMuNTg5MDdWNi45ODAxNUgxMS4yMTQ4QzExLjIxNDggOC42Nzk1MyAxMC4xNjM3IDkuOTI1MDcgOC45NTI1NCAxMC43OTk4QzguMzU1OTUgMTEuMjMwNiA3Ljc1Mzc0IDExLjU0NTQgNy4yOTc5NiAxMS43NTI3QzcuMTE2NzEgMTEuODM1MSA2Ljk2MDYyIDExLjg5OTYgNi44Mzk4NCAxMS45NDY5QzYuNzE5MDYgMTEuODk5NiA2LjU2Mjk3IDExLjgzNTEgNi4zODE3MyAxMS43NTI3QzUuOTI1OTUgMTEuNTQ1NCA1LjMyMzczIDExLjIzMDYgNC43MjcxNSAxMC43OTk4QzMuNTE2MDMgOS45MjUwNyAyLjQ2NDg0IDguNjc5NTUgMi40NjQ4NCA2Ljk4MDE4VjMuNTg5MDlDMy43MTczOCAzLjQ2MjM5IDQuODIzMDggMy4wODYzOSA1LjY1MDMzIDIuNzIwNzFDNi4xNDIyOCAyLjUwMzI0IDYuNTQ0ODUgMi4yODUzNyA2LjgzMjU0IDIuMTE2MjRDNy4xMjE4MSAyLjI4NTM1IDcuNTI3IDIuNTAzNTIgOC4wMjE5NiAyLjcyMTMxQzguMDI2MiAyLjcyMzE3IDguMDMwNDUgMi43MjUwNCA4LjAzNDcxIDIuNzI2OTFaTTUuOTY0ODQgMy40MDE0N1Y3Ljc3NjQ3SDcuNzE0ODRWMy40MDE0N0g1Ljk2NDg0Wk01Ljk2NDg0IDEwLjQwMTVWOC42NTE0N0g3LjcxNDg0VjEwLjQwMTVINS45NjQ4NFoiIGZpbGw9ImNyaW1zb24iIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=");
+    background-color: crimson;
+}
+.ace_icon_svg.ace_warning_fold {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyMCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC43NzY5IDE0LjczMzdMOC42NTE5MiAyLjQ4MzY5QzguMzI5NDYgMS44Mzg3NyA3LjQwOTEzIDEuODM4NzcgNy4wODY2NyAyLjQ4MzY5TDAuOTYxNjY5IDE0LjczMzdDMC42NzA3NzUgMTUuMzE1NSAxLjA5MzgzIDE2IDEuNzQ0MjkgMTZIMTMuOTk0M0MxNC42NDQ4IDE2IDE1LjA2NzggMTUuMzE1NSAxNC43NzY5IDE0LjczMzdaTTMuMTYwMDcgMTQuMjVMNy44NjkyOSA0LjgzMTU2TDEyLjU3ODUgMTQuMjVIMy4xNjAwN1pNOC43NDQyOSAxMS42MjVWMTMuMzc1SDYuOTk0MjlWMTEuNjI1SDguNzQ0MjlaTTYuOTk0MjkgMTAuNzVWNy4yNUg4Ljc0NDI5VjEwLjc1SDYuOTk0MjlaIiBmaWxsPSIjRUM3MjExIi8+CjxwYXRoIGQ9Ik0xMS4xOTkxIDIuOTUyMzhDMTAuODgwOSAyLjMxNDY3IDEwLjM1MzcgMS44MDUyNiA5LjcwNTUgMS41MDlMMTEuMDQxIDEuMDY5NzhDMTEuNjg4MyAwLjk0OTgxNCAxMi4zMzcgMS4yNzI2MyAxMi42MzE3IDEuODYxNDFMMTcuNjEzNiAxMS44MTYxQzE4LjM1MjcgMTMuMjkyOSAxNy41OTM4IDE1LjA4MDQgMTYuMDE4IDE1LjU3NDVDMTYuNDA0NCAxNC40NTA3IDE2LjMyMzEgMTMuMjE4OCAxNS43OTI0IDEyLjE1NTVMMTEuMTk5MSAyLjk1MjM4WiIgZmlsbD0iI0VDNzIxMSIvPgo8L3N2Zz4=");
+    background-color: darkorange;
+}
+
+.ace_scrollbar {
+    contain: strict;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+}
+
+.ace_scrollbar-inner {
+    position: absolute;
+    cursor: text;
+    left: 0;
+    top: 0;
+}
+
+.ace_scrollbar-v{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 0;
+}
+
+.ace_scrollbar-h {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    left: 0;
+}
+
+.ace_print-margin {
+    position: absolute;
+    height: 100%;
+}
+
+.ace_text-input {
+    position: absolute;
+    z-index: 0;
+    width: 0.5em;
+    height: 1em;
+    opacity: 0;
+    background: transparent;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    font: inherit;
+    padding: 0 1px;
+    margin: 0 -1px;
+    contain: strict;
+    -ms-user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
+    /*with `pre-line` chrome inserts &nbsp; instead of space*/
+    white-space: pre!important;
+}
+.ace_text-input.ace_composition {
+    background: transparent;
+    color: inherit;
+    z-index: 1000;
+    opacity: 1;
+}
+.ace_composition_placeholder { color: transparent }
+.ace_composition_marker { 
+    border-bottom: 1px solid;
+    position: absolute;
+    border-radius: 0;
+    margin-top: 1px;
+}
+
+[ace_nocontext=true] {
+    transform: none!important;
+    filter: none!important;
+    clip-path: none!important;
+    mask : none!important;
+    contain: none!important;
+    perspective: none!important;
+    mix-blend-mode: initial!important;
+    z-index: auto;
+}
+
+.ace_layer {
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    /* workaround for chrome bug https://github.com/ajaxorg/ace/issues/2312*/
+    word-wrap: normal;
+    white-space: pre;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    /* setting pointer-events: auto; on node under the mouse, which changes
+        during scroll, will break mouse wheel scrolling in Safari */
+    pointer-events: none;
+}
+
+.ace_gutter-layer {
+    position: relative;
+    width: auto;
+    text-align: right;
+    pointer-events: auto;
+    height: 1000000px;
+    contain: style size layout;
+}
+
+.ace_text-layer {
+    font: inherit !important;
+    position: absolute;
+    height: 1000000px;
+    width: 1000000px;
+    contain: style size layout;
+}
+
+.ace_text-layer > .ace_line, .ace_text-layer > .ace_line_group {
+    contain: style size layout;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.ace_hidpi .ace_text-layer,
+.ace_hidpi .ace_gutter-layer,
+.ace_hidpi .ace_content,
+.ace_hidpi .ace_gutter {
+    contain: strict;
+}
+.ace_hidpi .ace_text-layer > .ace_line, 
+.ace_hidpi .ace_text-layer > .ace_line_group {
+    contain: strict;
+}
+
+.ace_cjk {
+    display: inline-block;
+    text-align: center;
+}
+
+.ace_cursor-layer {
+    z-index: 4;
+}
+
+.ace_cursor {
+    z-index: 4;
+    position: absolute;
+    box-sizing: border-box;
+    border-left: 2px solid;
+    /* workaround for smooth cursor repaintng whole screen in chrome */
+    transform: translatez(0);
+}
+
+.ace_multiselect .ace_cursor {
+    border-left-width: 1px;
+}
+
+.ace_slim-cursors .ace_cursor {
+    border-left-width: 1px;
+}
+
+.ace_overwrite-cursors .ace_cursor {
+    border-left-width: 0;
+    border-bottom: 1px solid;
+}
+
+.ace_hidden-cursors .ace_cursor {
+    opacity: 0.2;
+}
+
+.ace_hasPlaceholder .ace_hidden-cursors .ace_cursor {
+    opacity: 0;
+}
+
+.ace_smooth-blinking .ace_cursor {
+    transition: opacity 0.18s;
+}
+
+.ace_animate-blinking .ace_cursor {
+    animation-duration: 1000ms;
+    animation-timing-function: step-end;
+    animation-name: blink-ace-animate;
+    animation-iteration-count: infinite;
+}
+
+.ace_animate-blinking.ace_smooth-blinking .ace_cursor {
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-name: blink-ace-animate-smooth;
+}
+    
+@keyframes blink-ace-animate {
+    from, to { opacity: 1; }
+    60% { opacity: 0; }
+}
+
+@keyframes blink-ace-animate-smooth {
+    from, to { opacity: 1; }
+    45% { opacity: 1; }
+    60% { opacity: 0; }
+    85% { opacity: 0; }
+}
+
+.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {
+    position: absolute;
+    z-index: 3;
+}
+
+.ace_marker-layer .ace_selection {
+    position: absolute;
+    z-index: 5;
+}
+
+.ace_marker-layer .ace_bracket {
+    position: absolute;
+    z-index: 6;
+}
+
+.ace_marker-layer .ace_error_bracket {
+    position: absolute;
+    border-bottom: 1px solid #DE5555;
+    border-radius: 0;
+}
+
+.ace_marker-layer .ace_active-line {
+    position: absolute;
+    z-index: 2;
+}
+
+.ace_marker-layer .ace_selected-word {
+    position: absolute;
+    z-index: 4;
+    box-sizing: border-box;
+}
+
+.ace_line .ace_fold {
+    box-sizing: border-box;
+
+    display: inline-block;
+    height: 11px;
+    margin-top: -2px;
+    vertical-align: middle;
+
+    background-image:
+        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),
+        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");
+    background-repeat: no-repeat, repeat-x;
+    background-position: center center, top left;
+    color: transparent;
+
+    border: 1px solid black;
+    border-radius: 2px;
+
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.ace_dark .ace_fold {
+}
+
+.ace_fold:hover{
+    background-image:
+        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),
+        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");
+}
+
+.ace_tooltip {
+    background-color: #f5f5f5;
+    border: 1px solid gray;
+    border-radius: 1px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: black;
+    max-width: 100%;
+    padding: 3px 4px;
+    position: fixed;
+    z-index: 999999;
+    box-sizing: border-box;
+    cursor: default;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: normal;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    pointer-events: none;
+    overflow: auto;
+    max-width: min(60em, 66vw);
+    overscroll-behavior: contain;
+}
+.ace_tooltip pre {
+    white-space: pre-wrap;
+}
+
+.ace_tooltip.ace_dark {
+    background-color: #636363;
+    color: #fff;
+}
+
+.ace_tooltip:focus {
+    outline: 1px solid #5E9ED6;
+}
+
+.ace_icon {
+    display: inline-block;
+    width: 18px;
+    vertical-align: top;
+}
+
+.ace_icon_svg {
+    display: inline-block;
+    width: 12px;
+    vertical-align: top;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 12px;
+    -webkit-mask-position: center;
+}
+
+.ace_folding-enabled > .ace_gutter-cell, .ace_folding-enabled > .ace_gutter-cell_svg-icons {
+    padding-right: 13px;
+}
+
+.ace_fold-widget {
+    box-sizing: border-box;
+
+    margin: 0 -12px 0 1px;
+    display: none;
+    width: 11px;
+    vertical-align: top;
+
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 3px;
+    
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.ace_folding-enabled .ace_fold-widget {
+    display: inline-block;   
+}
+
+.ace_fold-widget.ace_end {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");
+}
+
+.ace_fold-widget.ace_closed {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");
+}
+
+.ace_fold-widget:hover {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.ace_fold-widget:active {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+/**
+ * Dark version for fold widgets
+ */
+.ace_dark .ace_fold-widget {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");
+}
+.ace_dark .ace_fold-widget.ace_end {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");
+}
+.ace_dark .ace_fold-widget.ace_closed {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");
+}
+.ace_dark .ace_fold-widget:hover {
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.ace_dark .ace_fold-widget:active {
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.ace_inline_button {
+    border: 1px solid lightgray;
+    display: inline-block;
+    margin: -1px 8px;
+    padding: 0 5px;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.ace_inline_button:hover {
+    border-color: gray;
+    background: rgba(200,200,200,0.2);
+    display: inline-block;
+    pointer-events: auto;
+}
+
+.ace_fold-widget.ace_invalid {
+    background-color: #FFB4B4;
+    border-color: #DE5555;
+}
+
+.ace_fade-fold-widgets .ace_fold-widget {
+    transition: opacity 0.4s ease 0.05s;
+    opacity: 0;
+}
+
+.ace_fade-fold-widgets:hover .ace_fold-widget {
+    transition: opacity 0.05s ease 0.05s;
+    opacity:1;
+}
+
+.ace_underline {
+    text-decoration: underline;
+}
+
+.ace_bold {
+    font-weight: bold;
+}
+
+.ace_nobold .ace_bold {
+    font-weight: normal;
+}
+
+.ace_italic {
+    font-style: italic;
+}
+
+
+.ace_error-marker {
+    background-color: rgba(255, 0, 0,0.2);
+    position: absolute;
+    z-index: 9;
+}
+
+.ace_highlight-marker {
+    background-color: rgba(255, 255, 0,0.2);
+    position: absolute;
+    z-index: 8;
+}
+
+.ace_mobile-menu {
+    position: absolute;
+    line-height: 1.5;
+    border-radius: 4px;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background: white;
+    box-shadow: 1px 3px 2px grey;
+    border: 1px solid #dcdcdc;
+    color: black;
+}
+.ace_dark > .ace_mobile-menu {
+    background: #333;
+    color: #ccc;
+    box-shadow: 1px 3px 2px grey;
+    border: 1px solid #444;
+
+}
+.ace_mobile-button {
+    padding: 2px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.ace_mobile-button:hover {
+    background-color: #eee;
+    opacity:1;
+}
+.ace_mobile-button:active {
+    background-color: #ddd;
+}
+
+.ace_placeholder {
+    position: relative;
+    font-family: arial;
+    transform: scale(0.9);
+    transform-origin: left;
+    white-space: pre;
+    opacity: 0.7;
+    margin: 0 10px;
+    z-index: 1;
+}
+
+.ace_ghost_text {
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.ace_ghost_text_container > div {
+    white-space: pre;
+}
+
+.ghost_text_line_wrapped::after {
+    content: "↩";
+    position: absolute;
+}
+
+.ace_lineWidgetContainer.ace_ghost_text {
+    margin: 0px 4px
+}
+
+.ace_screenreader-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.ace_hidden_token {
+    display: none;
+}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace_scrollbar.css">.ace_editor>.ace_sb-v div, .ace_editor>.ace_sb-h div{
+  position: absolute;
+  background: rgba(128, 128, 128, 0.6);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  z-index: 8;
+}
+.ace_editor>.ace_sb-v, .ace_editor>.ace_sb-h {
+  position: absolute;
+  z-index: 6;
+  background: none;
+  overflow: hidden!important;
+}
+.ace_editor>.ace_sb-v {
+  z-index: 6;
+  right: 0;
+  top: 0;
+  width: 12px;
+}
+.ace_editor>.ace_sb-v div {
+  z-index: 8;
+  right: 0;
+  width: 100%;
+}
+.ace_editor>.ace_sb-h {
+  bottom: 0;
+  left: 0;
+  height: 12px;
+}
+.ace_editor>.ace_sb-h div {
+  bottom: 0;
+  height: 100%;
+}
+.ace_editor>.ace_sb_grabbed {
+  z-index: 8;
+  background: #000;
+}
+/*# sourceURL=ace/css/ace_scrollbar.css */</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="piQV8FYW1XPv6TYg0VhUCkRGNsaL6sAKsho77LKV">
+
+    
+            <link rel="canonical" href="https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image">
+    
+    <title>User profile card with Cover Image - Tailwind CSS Example</title>
+
+        <meta property="og:url" content="https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image">
+    
+    <meta property="og:title" content="User profile card with Cover Image - Tailwind CSS Example">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://tailwindflex.com/storage/thumbnails/user-profile-card-with-cover-image/thumb_u.min.webp?v=1">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="tailwindflex.com">
+    <meta property="twitter:url" content="https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image">
+    <meta name="twitter:title" content="User profile card with Cover Image - Tailwind CSS Example">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image:secure_url" content="https://tailwindflex.com/storage/thumbnails/user-profile-card-with-cover-image/thumb_u.min.webp?v=1">
+
+    <script src="./card-1_files/f.txt"></script><script async="" src="./card-1_files/clarity.js.download"></script><script src="./card-1_files/f(1).txt"></script><script async="" src="./card-1_files/dnfznplkbw"></script><script>
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
+            '(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+</script>
+
+    <script async="" src="./card-1_files/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-3L7MJ739MQ');
+    </script>
+    <script>
+        (function(c, l, a, r, i, t, y) {
+            c[a] = c[a] || function() {
+                (c[a].q = c[a].q || []).push(arguments)
+            };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "dnfznplkbw");
+    </script>
+
+    <script async="" src="./card-1_files/f(2).txt" crossorigin="anonymous" data-checked-head="true"></script>
+
+    <link rel="icon" type="image/svg" href="./card-1_files/logo.svg">
+
+    <link rel="preload" as="style" href="./card-1_files/app-DXp4LUAP.css"><link rel="stylesheet" href="./card-1_files/app-DXp4LUAP.css" data-navigate-track="reload">
+        <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/tailwindflex.com"},{"@type":"ListItem","position":2,"name":"Noob","item":"https:\/\/tailwindflex.com\/@noob_dev"},{"@type":"ListItem","position":3,"name":"User profile card with Cover Image","item":"https:\/\/tailwindflex.com\/@noob_dev\/user-profile-card-with-cover-image"}],[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/tailwindflex.com"},{"@type":"ListItem","position":2,"name":"Tags","item":"https:\/\/tailwindflex.com\/tags"},{"@type":"ListItem","position":3,"name":"Card","item":"https:\/\/tailwindflex.com\/tag\/card"},{"@type":"ListItem","position":4,"name":"User profile card with Cover Image","item":"https:\/\/tailwindflex.com\/@noob_dev\/user-profile-card-with-cover-image"}],[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/tailwindflex.com"},{"@type":"ListItem","position":2,"name":"Tags","item":"https:\/\/tailwindflex.com\/tags"},{"@type":"ListItem","position":3,"name":"Profile","item":"https:\/\/tailwindflex.com\/tag\/profile"},{"@type":"ListItem","position":4,"name":"User profile card with Cover Image","item":"https:\/\/tailwindflex.com\/@noob_dev\/user-profile-card-with-cover-image"}]]}</script>
+
+    <script>
+        var analyticPayload = "eyJpdiI6InJnSENkdmg4WnFCdEQ5Y1V1dkRvbUE9PSIsInZhbHVlIjoiLyt0c1MyMnRDcnJYM0N6RUI2cDVuRDJQZldPd0dVUlk2L0ZMTWhGRGlKWXRvaG1nbkIwTGphc2Z1NGd2Z3pTdDI5cTljS2hLUUtFQWZDRmNHeUlubG12SW1pYk5Vcm1TSXlNNEpwMnlMRzdkMXNBS1pVQW1FeHptT3NhMk5GUUMzQ0Zpb1UxdTdPM3drenVGR3N2clNRPT0iLCJtYWMiOiJkN2Q3ZTAxZTY4ZmNhZmVmYjcxYTM0YWE3MjQ0Njg2MTZiN2ZhOWIxMGVmNGQ3OWU2NTFmMjBjODZiYzgyZDhiIiwidGFnIjoiIn0=";
+    </script>
+
+    <!-- Livewire Styles --><style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+<meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style><link rel="modulepreload" as="script" crossorigin="" href="http://127.0.0.1:8000/build/assets/EditorTabsAceEditor-Cs6VPMEC.js"><link rel="modulepreload" as="script" crossorigin="" href="http://127.0.0.1:8000/build/assets/usePage-DVm2KdKa.js"><link rel="modulepreload" as="script" crossorigin="" href="http://127.0.0.1:8000/build/assets/_commonjsHelpers-D6-XlEtG.js"><link rel="modulepreload" as="script" crossorigin="" href="http://127.0.0.1:8000/build/assets/index-Chjiymov.js"><script async="" src="./card-1_files/ca-pub-1912506339651213"></script><script async="" src="./card-1_files/AGSKWxV95Kzc2Q8FINE2iwDLhHDN5FyqqZiR4zotwZUlYhlQBa9reiJSp040N_9dOGsWOUGhWgDxczryMpzVqLyF4YbOVa4vg-wZA5ylfBIggIGsnfVqC-hQ9pQeFv7unGqTDmd6Bh3pNQ=="></script><script async="" src="./card-1_files/AGSKWxWaDaPaOA00V5MnalOIXXArPhdFoA5YFEcXr9RtGfxrwo1dwqkGwaxAesS32SOOfW6AQ-M5cM3EbgfyZsD2Xrd-8sjXoMfEg_BkathNBw4JhT1uz_xlq4uWLV2U5YEDPbsFO25oGw=="></script><script async="" src="./card-1_files/AGSKWxU6eWl_GttGOhW3csnVThZv07QE5s-niCuhh9nTv33F3RAnUqbnH4uoIWzkXCxP_HRYeF5eSjDvzIdgAivTfCpqCKd0gpLpl48Xm21Z4MK3YKJkwfRvKhrI0QeqQX1ykEPytyxmyw=="></script><script async="" src="./card-1_files/AGSKWxV4TUIaqzIc066_ZmHUNpkTTxUspHF5CfkZCLYG1HqeH5QOSl8j_mRYdjjRRDKjA-28mSvdZ0YwqG35631YA8R6fTuU1dKs0OQxKFC02E59F15G8WSZxk38qfevk-DrogZP9sMXDw=="></script></head>
+
+<body class="w-full dark:bg-gray-800" aria-hidden="false" style="padding: 0px 0px 120px;">
+            <div wire:snapshot="{&quot;data&quot;:{&quot;isOpen&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;JEPw93s8Y8SVXgA6r5vC&quot;,&quot;name&quot;:&quot;modal.login-modal&quot;,&quot;path&quot;:&quot;@noob_dev\/user-profile-card-with-cover-image&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;da8deea6553a7474504cd62acb6fcd456f3f23aa985d98c04e6c0ab149baa4fc&quot;}" wire:effects="{&quot;listeners&quot;:[&quot;open-login-modal&quot;]}" wire:id="JEPw93s8Y8SVXgA6r5vC">
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]--></div>
+        <nav style="transition: top 0.8s; top: 0px;" id="main_navbar" class="sticky top-0 z-50">
+    <div class="flex items-center justify-between gap-8 px-2 py-2 bg-white border-b md:px-2 dark:border-gray-500/50 dark:bg-gray-800">
+
+        <a href="https://tailwindflex.com/" class="flex items-center shrink-0">
+            <img class="w-10" height="100" width="100" src="./card-1_files/logo.svg" alt="Talwindflex logo">
+            <span class="hidden md:flex text-2xl mt-0.5 font-bold text-primary-600 dark:text-white">
+                TailwindFlex
+            </span>
+        </a>
+
+        <form action="https://tailwindflex.com/search" class="relative w-[380px]">
+            <input class="pr-10 input" type="search" name="q" placeholder="Search">
+
+            <button type="submit" class="absolute top-0 right-0 mt-3 mr-4 text-gray-400 dark:text-gray-200">
+                <span class="sr-only">Search</span>
+                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
+                    <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"></path>
+                </svg>
+            </button>
+        </form>
+
+        <div class="flex items-center gap-3">
+
+            <a href="https://tailwindflex.com/tags" class="hidden btn-secondary lg:block">
+                Tags
+            </a>
+
+            <button id="theme-toggle" type="button" class="hidden lg:inline-block lg:ml-auto btn-secondary">
+                <span class="sr-only">Toggle Theme</span>
+
+                <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
+                </svg>
+
+                <svg id="theme-toggle-light-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"></path>
+                </svg>
+            </button>
+
+            <a href="https://tailwindflex.com/playground" class="hidden btn-primary lg:block">
+    Create Component
+</a>
+
+                            <a class="hidden btn-secondary lg:inline-block" href="https://tailwindflex.com/auth/login">
+                    Sign In
+                </a>
+            
+            <button dusk="mobile_menu_button" class="flex items-center p-1 navbar-burger text-primary-600 dark:text-primary-500">
+                <svg class="block w-8 h-8 fill-current md:h-8 md:w-8" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Hamberger menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </button>
+
+        </div>
+
+    </div>
+
+    
+    <div class="relative z-50 hidden navbar-menu" dusk="mobile_menu">
+        <div class="fixed inset-0 bg-gray-800 opacity-50 navbar-backdrop"></div>
+
+        <nav class="fixed top-0 bottom-0 right-0 flex flex-col w-5/6 max-w-sm px-6 py-6 overflow-y-auto bg-white border-l border-gray-500 dark:bg-gray-800">
+
+            <div class="flex items-center mb-8">
+                <a class="mr-auto text-2xl font-bold text-primary-600 dark:text-gray-100" href="https://tailwindflex.com/">
+                    TailwindFlex
+                </a>
+
+                <button class="navbar-close" dusk="mobile_menu_close_button">
+                    <svg class="w-6 h-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+
+                            <div class="flex justify-center gap-4 mb-6">
+                    <a class="btn-secondary" href="https://tailwindflex.com/auth/register">
+                        Sign Up
+                    </a>
+                    <a class="btn-primary" href="https://tailwindflex.com/auth/login">
+                        Sign In
+                    </a>
+                </div>
+            
+
+            <div class="mt-auto">
+
+                <div class="flex flex-col gap-3">
+
+                    <a href="https://tailwindflex.com/tags" class="btn-secondary">
+                        Tags
+                    </a>
+
+                    <a class="py-2 mb-5 text-center btn-primary" href="https://tailwindflex.com/playground">
+                        Tailwind Playground
+                    </a>
+
+                    <div class="flex justify-between">
+                        <button id="theme-toggle-2" type="button" class="flex justify-center btn-secondary hover:text-primary-600">
+                            <svg id="theme-toggle-dark-icon-2" class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
+                            </svg>
+                            <svg id="theme-toggle-light-icon-2" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"></path>
+                            </svg>
+                        </button>
+
+                                                    <a class="btn-secondary" href="https://tailwindflex.com/auth/login">
+                                Sign in
+                            </a>
+                        
+                    </div>
+
+                </div>
+
+                <p class="mt-4 text-xs text-center text-gray-400">
+                    <span>TailwindFlex Copyright © 2026</span>
+                </p>
+            </div>
+        </nav>
+    </div>
+</nav>
+    <main class="w-full bg-white dark:bg-gray-800">
+        
+    <div class="w-full p-2 md:p-4">
+
+        <nav class="flex mt-2 truncate&#39;" aria-label="Breadcrumb">
+
+    
+    <ol class="flex items-center">
+
+        <li class="inline-flex items-center">
+            <a href="https://tailwindflex.com/" class="inline-flex items-center text-sm text-gray-700 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                    </path>
+                </svg>
+                <span>Home</span>
+            </a>
+        </li>
+
+                                    <li>
+                    <div class="flex items-center">
+                        
+                        <svg class="w-5 h-5 pt-1 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                        </svg>
+
+                        <a href="https://tailwindflex.com/@noob_dev" class="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white">
+                            Noob
+                        </a>
+                    </div>
+                </li>
+                                                
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 pt-1 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                        </svg>
+
+                        
+                        <span class="text-sm text-gray-500 dark:text-gray-400">
+                            User profile card with Cover Image
+                        </span>
+                    </div>
+                </li>
+                    
+    </ol>
+</nav>
+
+        
+        <div class="relative my-4 flex flex-col z-20 gap-4 lg:flex-row lg:items-center lg:justify-between min-h-[340px]">
+
+            <div aria-hidden="true" class="absolute inset-0 grid w-full m-auto -z-10 h-max md:grid-cols-2 gap-60 opacity-40">
+                <div class="blur-[106px] h-56 bg-gradient-to-br from-primary-500 to-purple-400"></div>
+            </div>
+
+            <div class="relative flex flex-col flex-shrink-0 w-full px-4 py-8 bg-white border border-gray-300 rounded-md shadow-md -z-10 dark:bg-gray-800 dark:border-gray-700 lg:w-1/2">
+
+    
+    <button wire:snapshot="{&quot;data&quot;:{&quot;componentId&quot;:231,&quot;favorite&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;lV81cyMg0skeGvjIj40z&quot;,&quot;name&quot;:&quot;favorite-button&quot;,&quot;path&quot;:&quot;@noob_dev\/user-profile-card-with-cover-image&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;7be8ae96e4de22c65bd8271e5db1c428381b28ee95624a34f3ccf954d872be05&quot;}" wire:effects="[]" wire:id="lV81cyMg0skeGvjIj40z" title="add this component to favorite list" dusk="favoriteBtn" wire:click="toggleFavorite" class="absolute right-2 top-1 text-gray-600 dark:text-gray-400">
+    <span wire:loading.class="opacity-50" class="flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+        </svg>
+        <span class="hidden md:block">Favorite</span>
+    </span>
+
+    <div wire:loading="" wire:target="toggleFavorite" class="absolute z-20 items-center transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+        <div class="w-5 h-5 border-4 border-dashed rounded-full animate-spin border-primary-600 dark:border-primary-200">
+        </div>
+    </div>
+</button>
+
+            <h1 class="text-2xl antialiased font-bold md:text-3xl dark:text-gray-50">
+            User profile card with Cover Image
+        </h1>
+    
+    
+    
+    <div class="flex flex-col gap-4">
+
+        
+        <p class="pt-2 text-sm text-gray-700 leading-1 dark:text-gray-300/90">
+            This tailwind example is contributed by Noob,
+
+                            on 08-Oct-2022.
+            
+            Component is made with Tailwind CSS v3.
+
+                            It is responsive.
+            
+            
+                            similar terms for this example
+                are
+                Author box, User information
+                    </p>
+
+        <div class="flex flex-wrap items-center gap-2 py-3 text-gray-600 dark:text-gray-300">
+            
+                            <a href="https://tailwindflex.com/tag/card" class="font-semibold pill">
+                    Card
+                </a>
+                            <a href="https://tailwindflex.com/tag/profile" class="font-semibold pill">
+                    Profile
+                </a>
+                    </div>
+
+    </div>
+
+
+    <div class="flex flex-col-reverse justify-between mt-4 lg:flex-row">
+
+        <div class="flex gap-3">
+            <a href="https://tailwindflex.com/@noob_dev">
+                <img src="./card-1_files/115.png" class="object-cover w-12 h-12 rounded-md" alt="Noob profile image">
+            </a>
+
+            <p class="flex flex-col text-gray-600 dark:text-gray-300">
+                <small>Author</small>
+                <a href="https://tailwindflex.com/@noob_dev">
+                    Noob
+                </a>
+            </p>
+
+        </div>
+
+        <div class="flex items-center gap-2 mb-5 dark:text-gray-300 lg:mb-0">
+            
+
+
+                            <div title="component is responsive" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/50 dark:bg-gray-700/50 dark:text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"></path>
+                    </svg>
+                    
+                </div>
+            
+            <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/50 dark:bg-gray-700/50 dark:text-gray-300">
+
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+
+                <span>
+                    33.4k
+                </span>
+            </div>
+
+                            <div title="total favorites" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/50 dark:bg-gray-700/50 dark:text-gray-300">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+                    </svg>
+
+                    <span>
+                        23
+                    </span>
+                </div>
+            
+        </div>
+    </div>
+
+</div>
+
+            
+                                                <div class="flex items-center justify-center w-full h-full max-w-sm p-2 mx-auto">
+            <script async="" type="text/javascript" src="./card-1_files/carbon.js.download" id="_carbonads_js">
+            </script><div id="carbonads"><div id="carbon-cover" class="creativeId-769258"><a href="https://srv.carbonads.net/ads/click/x/GTND427YC6BDCK7NCYYLYKQUFTYDL5QYC67D4Z3JCAADT53UCWYIV2JKC6SIE2QYFTADCKJICYAIK27MCVSI6KQNHEYI553JCEYIK53ECTNCYBZ52K" rel="noopener sponsored" target="_blank" class="carbon-reveal">
+			<style>
+				#carbon-cover *{line-height:normal;margin:initial;padding:initial}#carbon-cover button{background:none;border:none;color:inherit;cursor:pointer;font:inherit;margin:0;outline:none;padding:0}#carbon-cover .carbon-visually-hidden{clip:rect(0 0 0 0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}#carbon-cover{--carbon-font-family:system-ui;--carbon-font-size:14px;--carbon-shadow:0 0 1px rgba(0,0,0,.085),0 0 2px rgba(0,0,0,.085),0 0 4px rgba(0,0,0,.085),0 0 8px rgba(0,0,0,.085);--carbon-icon-size:0.75em;align-items:flex-start;display:flex;flex-direction:column;font-family:var(--carbon-font-family);font-size:var(--carbon-font-size);max-inline-size:400px;z-index:10}#carbon-cover>a:first-child{align-items:flex-start;border-radius:6px;box-shadow:var(--carbon-shadow);display:flex;flex-direction:row-reverse;flex-wrap:wrap;gap:2ch;justify-content:center;overflow:hidden;padding:5%;position:relative;text-decoration:none;z-index:2}#carbon-cover>a:first-child:after,#carbon-cover>a:first-child:before{content:"";inset:0;position:absolute}#carbon-cover>a:before{background-position:50%;background-repeat:no-repeat;background-size:cover;z-index:0}#carbon-cover>a:after{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);content:"";z-index:1}#carbon-cover>a>*{z-index:3}#carbon-cover .carbon-main{color:#fff;display:flex;flex-basis:calc(100% - 250px);flex-direction:column;flex-grow:1;row-gap:1ch}#carbon-cover .carbon-logo{display:flex;flex-direction:column;justify-content:flex-start;min-height:72px}#carbon-cover .carbon-logo img{height:auto;max-width:125px}#carbon-cover .carbon-tagline{font-weight:500;line-height:1.3;margin-top:auto;max-inline-size:16ch}#carbon-cover .carbon-text{align-items:flex-start;display:flex;flex-direction:column;height:100px}#carbon-cover .carbon-description{flex-grow:1;font-size:.9em;line-height:1.35;max-inline-size:54ch;overflow:hidden}#carbon-cover .carbon-cta{background:#fff;border-radius:3px;box-shadow:var(--carbon-shadow);color:#111;font-weight:600;padding:1ex 1ch}#carbon-cover .carbon-large-image{border-radius:5px;box-shadow:var(--carbon-shadow);display:block;max-inline-size:250px;width:50%}#carbon-cover a:hover .carbon-large-image{width:20%}#carbon-cover .carbon-footer{align-items:center;color:grey;-moz-column-gap:1ch;column-gap:1ch;display:flex;justify-content:stretch;margin-block-start:.75ex;position:relative;text-decoration:none;width:100%}#carbon-cover .carbon-footer a{color:#b3b3b3;text-decoration:none}#carbon-cover .carbon-footer button{background-color:#f2f2f2;border-radius:3px;display:grid;padding:.5ch;place-content:center}#carbon-cover .carbon-footer button:hover{background-color:#e6e6e6;transition:background-color .2s ease-in-out}#carbon-cover button>svg{height:var(--carbon-icon-size);stroke:#b3b3b3;stroke-width:3;width:var(--carbon-icon-size)}#carbon-cover .carbon-via{font-size:.9em;margin-left:auto}#carbon-cover .carbon-footer a.carbon-no-hover .carbon-share{display:none;position:relative}#carbon-cover .carbon-share-icon:not(.carbon-no-hover):hover+.carbon-share,#carbon-cover .carbon-share:hover{opacity:1;z-index:3}#carbon-cover .carbon-share-icon:not(.carbon-no-hover):hover:before{content:"";display:block;height:5ex;position:absolute;top:-10px;width:14ch;z-index:2}#carbon-cover .carbon-share{background-color:#fff;border:1px solid #ccc;border-radius:5px;bottom:calc(var(--carbon-icon-size) + 14px);box-shadow:var(--carbon-shadow);left:0;opacity:0;padding:.2em;position:absolute;transition:opacity .2s ease-in-out}#carbon-cover .carbon-share ul{color:#212121;font-size:12px;font-weight:500;list-style-type:none;padding:.5em}#carbon-cover .carbon-share ul>*+*{margin-top:10px}#carbon-cover .carbon-description{opacity:0;transition:opacity .1s ease-out}#carbon-cover a:hover .carbon-description{opacity:1;transition:opacity .5s ease-in .25s}#carbon-cover .carbon-large-image{transition:width .25s ease-in-out}#carbon-cover .carbon-main{transition:opacity .01s ease-in-out}@property --reveal-mask{syntax:"<percentage>";initial-value:0%;inherits:false}#carbon-cover .carbon-reveal{animation:var(--reveal-duration,1.5s) var(--reveal-delay,0s) carbon-reveal forwards;-webkit-mask-image:linear-gradient(var(--reveal-angle,135deg),#000 calc(var(--reveal-mask) - 100%),transparent var(--reveal-mask))}@keyframes carbon-reveal{70%,to{--reveal-mask:200%}}#carbon-cover.carbon-cover--stacked>a:first-child{aspect-ratio:unset}#carbon-cover.carbon-cover--stacked .carbon-large-image{max-width:100%;width:unset}#carbon-cover.carbon-cover--stacked a:hover .carbon-large-image{width:unset}#carbon-cover.carbon-cover--stacked .carbon-logo{min-height:unset;row-gap:1ch}#carbon-cover.carbon-cover--stacked .carbon-text{align-items:stretch;height:unset;row-gap:1ch}#carbon-cover.carbon-cover--stacked .carbon-tagline{max-inline-size:unset;min-height:unset}#carbon-cover.carbon-cover--stacked .carbon-description{flex-grow:unset;line-height:1.4;opacity:unset}#carbon-cover.carbon-cover--stacked .carbon-cta{align-self:stretch;text-align:center}
+				.creativeId-769258 > a:first-child::after {
+					background-color: rgba(123, 22, 93, 0.8);
+				}
+				.creativeId-769258 > a:first-child::before {
+					background-image: url('https://srv.carbonads.net/static/30242/2ac13069e0f0f9511668604c3412a98c8d6f2445')
+				}
+				
+			</style>
+			<img class="carbon-large-image" src="./card-1_files/2ac13069e0f0f9511668604c3412a98c8d6f2445" alt="Auth0" border="0" data-statview="https://srv.carbonads.net/ads/viewable/x/GTND427YC6BDCK7NCYYLYKQUFTYDL5QYC67D4Z3JCAADT53UCWYIV2JKC6SIE2QYFTADCKJICYAIK27MCVSI6KQNHEYI553JCEYIK53ECTNFKBZH5REN6SDH?segment=placement:tailwindflexcom">
+			<div class="carbon-main">
+				<div class="carbon-logo">
+					<img src="./card-1_files/2225443300037de2b6936e88f489d946d41150f7" alt="" border="0">
+					<div class="carbon-tagline">Remove identity bottlenecks for AI agents</div>
+				</div>
+				<div class="carbon-text">
+					<div class="carbon-description">Let agents log in, call APIs, &amp; connect to MCP servers securely, all with fine-grained controls &amp; a few lines of code.</div>
+					<div class="carbon-cta">Start Building</div>
+				</div>
+			</div>
+			</a><div class="carbon-footer">
+			<button class="carbon-share-icon carbon-no-hover">
+				<span class="carbon-visually-hidden">Share Carbon Ad Icon</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"></path></svg>
+			</button>
+			<div class="carbon-share">
+				<ul>
+					<li><a href="https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image#" id="carbonCopyLink">Copy Link</a></li>
+					<li><a href="https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image#" id="carbonEmailLink">Send via email</a></li>
+				</ul>
+			</div>
+			<button id="carbon-refresh">
+				<span class="carbon-visually-hidden">Refresh Carbon Ad</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+			</button>
+			<a href="http://carbonads.net/?utm_source=tailwindflexcom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-via" target="_blank" rel="noopener sponsored">ads via Carbon</a>
+			</div></div></div>
+        </div>
+                                                
+        </div>
+
+
+        <div id="component-preview" data-props="{&quot;component&quot;:{&quot;id&quot;:231,&quot;slug&quot;:&quot;user-profile-card-with-cover-image&quot;,&quot;title&quot;:&quot;User profile card with Cover Image&quot;,&quot;description&quot;:null,&quot;tw_css&quot;:&quot;@tailwind base;\n@tailwind components;\n@tailwind utilities;&quot;,&quot;tw_config&quot;:&quot;tailwind.config = {\n  darkMode: \u0027class\u0027,\n  theme: {\n    extend: {}\n  }\n}&quot;,&quot;tw_version&quot;:&quot;3.4&quot;,&quot;forked_from&quot;:null,&quot;user_id&quot;:115,&quot;center_type&quot;:1,&quot;is_responsive&quot;:true,&quot;is_supports_dark_mode&quot;:false,&quot;tags&quot;:[{&quot;label&quot;:&quot;Card&quot;,&quot;value&quot;:3},{&quot;label&quot;:&quot;Profile&quot;,&quot;value&quot;:28}],&quot;user&quot;:{&quot;name&quot;:&quot;Noob&quot;,&quot;user_name&quot;:&quot;noob_dev&quot;},&quot;html&quot;:&quot;\u003C!-- https:\/\/gist.github.com\/goodreds\/5b8a4a2bf11ff67557d38c5e727ea86c --\u003E\n\n\u003Cdiv\n    class=\u0022max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900\u0022\u003E\n    \u003Cdiv class=\u0022rounded-t-lg h-32 overflow-hidden\u0022\u003E\n        \u003Cimg class=\u0022object-cover object-top w-full\u0022 src=\u0027https:\/\/images.unsplash.com\/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=entropy\u0026cs=tinysrgb\u0026w=400\u0026fit=max\u0026ixid=eyJhcHBfaWQiOjE0NTg5fQ\u0027 alt=\u0027Mountain\u0027\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden\u0022\u003E\n        \u003Cimg class=\u0022object-cover object-center h-32\u0022 src=\u0027https:\/\/images.unsplash.com\/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=entropy\u0026cs=tinysrgb\u0026w=400\u0026fit=max\u0026ixid=eyJhcHBfaWQiOjE0NTg5fQ\u0027 alt=\u0027Woman looking front\u0027\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022text-center mt-2\u0022\u003E\n        \u003Ch2 class=\u0022font-semibold\u0022\u003ESarah Smith\u003C\/h2\u003E\n        \u003Cp class=\u0022text-gray-500\u0022\u003EFreelance Web Designer\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cul class=\u0022py-4 mt-2 text-gray-700 flex items-center justify-around\u0022\u003E\n        \u003Cli class=\u0022flex flex-col items-center justify-around\u0022\u003E\n            \u003Csvg class=\u0022w-4 fill-current text-blue-900\u0022 xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022 viewBox=\u00220 0 20 20\u0022\u003E\n                \u003Cpath\n                    d=\u0022M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z\u0022 \/\u003E\n            \u003C\/svg\u003E\n            \u003Cdiv\u003E2k\u003C\/div\u003E\n        \u003C\/li\u003E\n        \u003Cli class=\u0022flex flex-col items-center justify-between\u0022\u003E\n            \u003Csvg class=\u0022w-4 fill-current text-blue-900\u0022 xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022 viewBox=\u00220 0 20 20\u0022\u003E\n                \u003Cpath\n                    d=\u0022M7 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1c2.15 0 4.2.4 6.1 1.09L12 16h-1.25L10 20H4l-.75-4H2L.9 10.09A17.93 17.93 0 0 1 7 9zm8.31.17c1.32.18 2.59.48 3.8.92L18 16h-1.25L16 20h-3.96l.37-2h1.25l1.65-8.83zM13 0a4 4 0 1 1-1.33 7.76 5.96 5.96 0 0 0 0-7.52C12.1.1 12.53 0 13 0z\u0022 \/\u003E\n            \u003C\/svg\u003E\n            \u003Cdiv\u003E10k\u003C\/div\u003E\n        \u003C\/li\u003E\n        \u003Cli class=\u0022flex flex-col items-center justify-around\u0022\u003E\n            \u003Csvg class=\u0022w-4 fill-current text-blue-900\u0022 xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022 viewBox=\u00220 0 20 20\u0022\u003E\n                \u003Cpath\n                    d=\u0022M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z\u0022 \/\u003E\n            \u003C\/svg\u003E\n            \u003Cdiv\u003E15\u003C\/div\u003E\n        \u003C\/li\u003E\n    \u003C\/ul\u003E\n    \u003Cdiv class=\u0022p-4 border-t mx-8 mt-2\u0022\u003E\n        \u003Cbutton class=\u0022w-1\/2 block mx-auto rounded-full bg-gray-900 hover:shadow-lg font-semibold text-white px-6 py-2\u0022\u003EFollow\u003C\/button\u003E\n    \u003C\/div\u003E\n\u003C\/div\u003E&quot;},&quot;user&quot;:[]}"><div class="py-4 sm:py-8"><div dusk="previewOptionsBar" class="flex flex-wrap items-center justify-between w-full gap-2 pb-3 md:gap-4"><div class="flex items-center gap-2"><p class="mr-1 text-xs md:text-base dark:text-gray-300">Share:</p><div class="flex gap-3"><a target="_blank" title="Share on Facebook" class="transition-transform hover:scale-105" href="https://web.facebook.com/sharer.php?u=https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image"><svg class="w-6 h-6 text-gray-900 dark:text-gray-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="100px" height="100px"><path d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z"></path></svg></a><a target="_blank" title="Share on Twitter" class="transition-transform hover:scale-105" href="https://twitter.com/intent/tweet?text=User%20profile%20card%20with%20Cover%20Image%20-%20Tailwind%20CSS%20Example&amp;url=https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image"><svg class="w-6 h-6 text-gray-900 dark:text-gray-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="100px" height="100px"><path d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"></path></svg></a><a target="_blank" title="Share on Reddit" class="transition-transform hover:scale-105" href="http://www.reddit.com/submit?url=https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image&amp;title=User%20profile%20card%20with%20Cover%20Image%20-%20Tailwind%20CSS%20Example"><svg class="w-6 h-6 text-gray-900 dark:text-gray-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="100px" height="100px"><path d="M 29 3 C 28.0625 3 27.164063 3.382813 26.5 4 C 25.835938 4.617188 25.363281 5.433594 25 6.40625 C 24.355469 8.140625 24.085938 10.394531 24.03125 13.03125 C 19.234375 13.179688 14.820313 14.421875 11.28125 16.46875 C 10.214844 15.46875 8.855469 14.96875 7.5 14.96875 C 6.089844 14.96875 4.675781 15.511719 3.59375 16.59375 C 1.425781 18.761719 1.425781 22.238281 3.59375 24.40625 L 3.84375 24.65625 C 3.3125 26.035156 3 27.488281 3 29 C 3 33.527344 5.566406 37.585938 9.5625 40.4375 C 13.558594 43.289063 19.007813 45 25 45 C 30.992188 45 36.441406 43.289063 40.4375 40.4375 C 44.433594 37.585938 47 33.527344 47 29 C 47 27.488281 46.6875 26.035156 46.15625 24.65625 L 46.40625 24.40625 C 48.574219 22.238281 48.574219 18.761719 46.40625 16.59375 C 45.324219 15.511719 43.910156 14.96875 42.5 14.96875 C 41.144531 14.96875 39.785156 15.46875 38.71875 16.46875 C 35.195313 14.433594 30.800781 13.191406 26.03125 13.03125 C 26.09375 10.546875 26.363281 8.46875 26.875 7.09375 C 27.164063 6.316406 27.527344 5.757813 27.875 5.4375 C 28.222656 5.117188 28.539063 5 29 5 C 29.460938 5 29.683594 5.125 30.03125 5.40625 C 30.378906 5.6875 30.785156 6.148438 31.3125 6.6875 C 32.253906 7.652344 33.695313 8.714844 36.09375 8.9375 C 36.539063 11.238281 38.574219 13 41 13 C 43.75 13 46 10.75 46 8 C 46 5.25 43.75 3 41 3 C 38.605469 3 36.574219 4.710938 36.09375 6.96875 C 34.3125 6.796875 33.527344 6.109375 32.75 5.3125 C 32.300781 4.851563 31.886719 4.3125 31.3125 3.84375 C 30.738281 3.375 29.9375 3 29 3 Z M 41 5 C 42.667969 5 44 6.332031 44 8 C 44 9.667969 42.667969 11 41 11 C 39.332031 11 38 9.667969 38 8 C 38 6.332031 39.332031 5 41 5 Z M 25 15 C 30.609375 15 35.675781 16.613281 39.28125 19.1875 C 42.886719 21.761719 45 25.226563 45 29 C 45 32.773438 42.886719 36.238281 39.28125 38.8125 C 35.675781 41.386719 30.609375 43 25 43 C 19.390625 43 14.324219 41.386719 10.71875 38.8125 C 7.113281 36.238281 5 32.773438 5 29 C 5 25.226563 7.113281 21.761719 10.71875 19.1875 C 14.324219 16.613281 19.390625 15 25 15 Z M 7.5 16.9375 C 8.203125 16.9375 8.914063 17.148438 9.53125 17.59375 C 7.527344 19.03125 5.886719 20.769531 4.75 22.71875 C 3.582031 21.296875 3.660156 19.339844 5 18 C 5.714844 17.285156 6.609375 16.9375 7.5 16.9375 Z M 42.5 16.9375 C 43.390625 16.9375 44.285156 17.285156 45 18 C 46.339844 19.339844 46.417969 21.296875 45.25 22.71875 C 44.113281 20.769531 42.472656 19.03125 40.46875 17.59375 C 41.085938 17.148438 41.796875 16.9375 42.5 16.9375 Z M 17 22 C 14.800781 22 13 23.800781 13 26 C 13 28.199219 14.800781 30 17 30 C 19.199219 30 21 28.199219 21 26 C 21 23.800781 19.199219 22 17 22 Z M 33 22 C 30.800781 22 29 23.800781 29 26 C 29 28.199219 30.800781 30 33 30 C 35.199219 30 37 28.199219 37 26 C 37 23.800781 35.199219 22 33 22 Z M 17 24 C 18.117188 24 19 24.882813 19 26 C 19 27.117188 18.117188 28 17 28 C 15.882813 28 15 27.117188 15 26 C 15 24.882813 15.882813 24 17 24 Z M 33 24 C 34.117188 24 35 24.882813 35 26 C 35 27.117188 34.117188 28 33 28 C 31.882813 28 31 27.117188 31 26 C 31 24.882813 31.882813 24 33 24 Z M 34.15625 33.84375 C 34.101563 33.851563 34.050781 33.859375 34 33.875 C 33.683594 33.9375 33.417969 34.144531 33.28125 34.4375 C 33.28125 34.4375 32.757813 35.164063 31.4375 36 C 30.117188 36.835938 28.058594 37.6875 25 37.6875 C 21.941406 37.6875 19.882813 36.835938 18.5625 36 C 17.242188 35.164063 16.71875 34.4375 16.71875 34.4375 C 16.492188 34.082031 16.066406 33.90625 15.65625 34 C 15.332031 34.082031 15.070313 34.316406 14.957031 34.632813 C 14.84375 34.945313 14.894531 35.292969 15.09375 35.5625 C 15.09375 35.5625 15.863281 36.671875 17.46875 37.6875 C 19.074219 38.703125 21.558594 39.6875 25 39.6875 C 28.441406 39.6875 30.925781 38.703125 32.53125 37.6875 C 34.136719 36.671875 34.90625 35.5625 34.90625 35.5625 C 35.207031 35.273438 35.296875 34.824219 35.128906 34.441406 C 34.960938 34.058594 34.574219 33.820313 34.15625 33.84375 Z"></path></svg></a><a target="_blank" title="Share on LinkedIn" class="hidden transition-transform sm:block hover:scale-105" href="https://www.linkedin.com/sharing/share-offsite/?url=https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image"><svg class="w-6 h-6 text-gray-900 dark:text-gray-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="100px" height="100px"><path d="M 8 3.0117188 C 6.3126093 3.0117188 4.8354789 3.4916328 3.7539062 4.3652344 C 2.6723337 5.238836 2.0117188 6.533218 2.0117188 7.9472656 C 2.0117188 10.690836 4.4687078 12.814467 7.7167969 12.941406 A 0.98809878 0.98809878 0 0 0 8 12.988281 C 9.753566 12.988281 11.246191 12.474267 12.3125 11.564453 C 13.378809 10.654639 13.988281 9.3429353 13.988281 7.9472656 A 0.98809878 0.98809878 0 0 0 13.986328 7.8925781 C 13.832307 5.1316834 11.374781 3.0117187 8 3.0117188 z M 8 4.9882812 C 10.60907 4.9882812 11.895883 6.2693448 12.005859 7.9726562 C 11.998759 8.8049335 11.676559 9.5118991 11.03125 10.0625 C 10.378809 10.619186 9.371434 11.011719 8 11.011719 C 5.3980542 11.011719 3.9882813 9.5991704 3.9882812 7.9472656 C 3.9882812 7.1213132 4.3276663 6.4422421 4.9960938 5.9023438 C 5.6645211 5.3624454 6.6873907 4.9882813 8 4.9882812 z M 3 15 A 1.0001 1.0001 0 0 0 2 16 L 2 45 A 1.0001 1.0001 0 0 0 3 46 L 13 46 A 1.0001 1.0001 0 0 0 14 45 L 14 35.664062 L 14 16 A 1.0001 1.0001 0 0 0 13 15 L 3 15 z M 18 15 A 1.0001 1.0001 0 0 0 17 16 L 17 45 A 1.0001 1.0001 0 0 0 18 46 L 28 46 A 1.0001 1.0001 0 0 0 29 45 L 29 29 L 29 28.75 L 29 28.5 C 29 26.555577 30.555577 25 32.5 25 C 34.444423 25 36 26.555577 36 28.5 L 36 45 A 1.0001 1.0001 0 0 0 37 46 L 47 46 A 1.0001 1.0001 0 0 0 48 45 L 48 28 C 48 23.873476 46.787888 20.604454 44.744141 18.375 C 42.700394 16.145546 39.849212 15 36.787109 15 C 32.882872 15 30.521631 16.426076 29 17.601562 L 29 16 A 1.0001 1.0001 0 0 0 28 15 L 18 15 z M 4 17 L 12 17 L 12 35.664062 L 12 44 L 4 44 L 4 17 z M 19 17 L 27 17 L 27 19.638672 A 1.0001 1.0001 0 0 0 28.744141 20.306641 C 28.744141 20.306641 31.709841 17 36.787109 17 C 39.360007 17 41.615528 17.922268 43.269531 19.726562 C 44.923534 21.530858 46 24.261524 46 28 L 46 44 L 38 44 L 38 28.5 A 1.0001 1.0001 0 0 0 37.916016 28.089844 C 37.694061 25.26411 35.38033 23 32.5 23 C 29.474423 23 27 25.474423 27 28.5 L 27 28.75 L 27 29 L 27 44 L 19 44 L 19 17 z"></path></svg></a></div></div><div class="flex items-center gap-1 md:gap-4"><a dusk="forkComponentButton" href="https://tailwindflex.com/playground/fork/user-profile-card-with-cover-image" title="Fork Component" class="flex items-center gap-1 px-2 py-1 text-sm text-gray-800 transition rounded-md dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path xmlns="http://www.w3.org/2000/svg" d="M7,12 L14.5,12 C16.277025,12 17.7447372,10.6756742 17.970024,8.96013518 C16.2885152,8.7047201 15,7.25283448 15,5.5 C15,3.56700338 16.5670034,2 18.5,2 C20.4329966,2 22,3.56700338 22,5.5 C22,7.27155475 20.6838151,8.73569805 18.9759671,8.96790818 C18.7419236,11.2333126 16.8272778,13 14.5,13 L7,13 L7,15.0354444 C8.69614707,15.2780593 10,16.736764 10,18.5 C10,20.4329966 8.43299662,22 6.5,22 C4.56700338,22 3,20.4329966 3,18.5 C3,16.736764 4.30385293,15.2780593 6,15.0354444 L6,8.96455557 C4.30385293,8.72194074 3,7.26323595 3,5.5 C3,3.56700338 4.56700338,2 6.5,2 C8.43299662,2 10,3.56700338 10,5.5 C10,7.26323595 8.69614707,8.72194074 7,8.96455557 L7,12 Z M4,18.5 C4,19.8807119 5.11928813,21 6.5,21 C7.88071187,21 9,19.8807119 9,18.5 C9,17.1192881 7.88071187,16 6.5,16 C5.11928813,16 4,17.1192881 4,18.5 Z M4,5.5 C4,6.88071187 5.11928813,8 6.5,8 C7.88071187,8 9,6.88071187 9,5.5 C9,4.11928813 7.88071187,3 6.5,3 C5.11928813,3 4,4.11928813 4,5.5 Z M18.5,3 C17.1192881,3 16,4.11928813 16,5.5 C16,6.88071187 17.1192881,8 18.5,8 C19.8807119,8 21,6.88071187 21,5.5 C21,4.11928813 19.8807119,3 18.5,3 Z"></path></svg><span class="hidden md:block">Fork</span></a><button title="Copy HTML" dusk="copyComponentButton" class="flex items-center gap-1 px-2 py-1 text-sm text-gray-800 transition rounded-md dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"></path></svg><span class="hidden md:block">Copy code</span></button><a dusk="fullscreenComponentButton" href="https://tailwindflex.com/@noob_dev/user-profile-card-with-cover-image/fullscreen-preview" title="Fullscreen Preview" class="flex items-center gap-1 px-2 py-1 text-sm text-gray-800 transition rounded-md dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"></path></svg><span class="hidden md:block">Fullscreen</span></a></div></div><div dusk="previewSection"><div class="flex rounded-t-lg bg-primary-500"><button dusk="previewTabButton" class="bg-primary-700 rounded-t-lg text-white px-4 py-3 font-semibold">Preview</button><button dusk="codeTabButton" class="bg-transparent text-gray-100 px-4 py-3 font-semibold">Code</button></div><div class="relative z-40 border-4 rounded-b-lg shadow-lg border-primary-700 dark:bg-gray-700" style="height: 600px;"><div class="h-full block" style="height: 600px;"><div class="flex h-[10%] justify-between items-center bg-primary-700 px-2 pt-1"><div class="flex items-center gap-2"><button title="Align component to the center" class="text-gray-200 rounded-md px-2 py-0.5 border border-gray-300/30">Center [1]</button></div><div class="hidden md:flex"><button class="text-gray-300 flex flex-col items-center justify-end px-3 py-1 text-md font-mono hover:text-slate-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"></path></svg><span>xs</span></button><button class="text-gray-300 flex flex-col items-center justify-end px-3 py-1 text-md font-mono hover:text-slate-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"></path></svg><span>sm</span></button><button class="text-gray-300 flex flex-col items-center justify-end px-3 py-1 text-md font-mono hover:text-slate-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5h3m-6.75 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-15a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 4.5v15a2.25 2.25 0 0 0 2.25 2.25Z"></path></svg>md</button><button class="text-gray-300 hidden lg:flex flex-col items-center justify-end px-3 py-1 text-md font-mono hover:text-slate-50"><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9H4V7ZM2 19h20"></path></svg>lg</button><button class="text-gray-300 hidden xl:flex flex-col items-center justify-end px-3 py-1 text-md font-mono hover:text-slate-50"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"></path></svg>xl</button><button class="text-gray-100 underline flex flex-col items-center justify-end px-3 py-1 text-md font-mono hover:text-slate-50"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="24px" stroke="currentColor" fill="currentColor" viewBox="0 0 100 100" aria-hidden="true" role="img" stroke-width="1"><path d="M8.5 22.5A3.5 3.5 0 0 0 5 26v48a3.5 3.5 0 0 0 3.5 3.5h83A3.5 3.5 0 0 0 95 74V26a3.5 3.5 0 0 0-3.5-3.5h-83zm3.5 7h76v41H12v-41z"></path></svg>full</button></div></div><div class="relative w-full h-full bg-gray-200" style="height: 88.7%;"><iframe class="w-full h-full m-auto bg-white" style="width: 100%;" title="User profile card with Cover Image" src="./card-1_files/saved_resource.html"></iframe></div></div><div class="h-full hidden" style="height: 600px;"><div class="flex h-[6%] items-center bg-primary-700"><button dusk="codeTabHtmlButton" class="text-sm text-gray-200 rounded-t-lg bg-[#1e1e1e] shadow text-white px-4 py-2">HTML</button><button dusk="codeTabCssButton" class="text-sm text-gray-200 rounded-t-lg bg-transparent px-4 py-2">CSS</button><button dusk="codeTabConfigButton" class="text-sm text-gray-200 rounded-t-lg bg-transparent px-4 py-2">CONFIG</button></div><div class="relative w-full h-full" style="height: 92.9%;"><div class="absolute inset-0 transition-opacity duration-300 ease-in-out opacity-100" style="z-index: 0; pointer-events: auto;"><div id="html-editor" class=" ace_editor ace-monokai ace_dark" style="width: 100%; height: 100%; font-size: 16px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px;" aria-haspopup="false" aria-autocomplete="both" role="textbox" readonly=""></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px;"></div></div><div class="ace_scroller" style="line-height: 0px;"><div class="ace_content"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 4px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px;"></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px;"><div class="ace_scrollbar-inner" style="width: 20px;">&nbsp;</div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px;"><div class="ace_scrollbar-inner" style="height: 20px;">&nbsp;</div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></div><div class="absolute inset-0 transition-opacity duration-300 ease-in-out opacity-0" style="z-index: -10; pointer-events: none;"><div id="css-editor" class=" ace_editor ace-monokai ace_dark" style="width: 100%; height: 100%; font-size: 16px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px;" aria-haspopup="false" aria-autocomplete="both" role="textbox" readonly=""></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px;"></div></div><div class="ace_scroller" style="line-height: 0px;"><div class="ace_content"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 4px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px;"></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px;"><div class="ace_scrollbar-inner" style="width: 20px;">&nbsp;</div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px;"><div class="ace_scrollbar-inner" style="height: 20px;">&nbsp;</div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></div><div class="absolute inset-0 transition-opacity duration-300 ease-in-out opacity-0" style="z-index: -10; pointer-events: none;"><div id="config-editor" class=" ace_editor ace-monokai ace_dark" style="width: 100%; height: 100%; font-size: 16px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px;" aria-haspopup="false" aria-autocomplete="both" role="textbox" readonly=""></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="height: 1e+06px;"></div></div><div class="ace_scroller" style="line-height: 0px;"><div class="ace_content"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 4px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_text-layer" style="height: 1e+06px; margin: 0px 4px;"></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 20px;"><div class="ace_scrollbar-inner" style="width: 20px;">&nbsp;</div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px;"><div class="ace_scrollbar-inner" style="height: 20px;">&nbsp;</div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></div></div></div></div></div></div></div>
+
+        
+
+        <div wire:snapshot="{&quot;data&quot;:{&quot;component&quot;:[[],{&quot;key&quot;:231,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;,&quot;tags&quot;,&quot;rankingInLast30Days&quot;,&quot;forkedFromComponent&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;recommendations&quot;:[[[[],{&quot;key&quot;:209,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:237,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:987,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:545,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:89,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:702,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:178,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:818,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:717,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:494,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:862,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:279,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:1006,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:275,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:1048,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:493,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:282,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],[[],{&quot;key&quot;:495,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}]],{&quot;class&quot;:&quot;Illuminate\\Support\\Collection&quot;,&quot;s&quot;:&quot;clctn&quot;}],&quot;loadMoreClicksCount&quot;:0,&quot;showLoadMoreButton&quot;:true,&quot;bags&quot;:[{&quot;CC_BIAS&quot;:[{&quot;components&quot;:[[],{&quot;class&quot;:&quot;Illuminate\\Support\\Collection&quot;,&quot;s&quot;:&quot;clctn&quot;}],&quot;is_loaded&quot;:true,&quot;limit&quot;:18,&quot;minBias&quot;:3},{&quot;s&quot;:&quot;arr&quot;}],&quot;M_TAGS&quot;:[{&quot;components&quot;:[{&quot;2558&quot;:[[],{&quot;key&quot;:2558,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;2467&quot;:[[],{&quot;key&quot;:2467,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;229&quot;:[[],{&quot;key&quot;:229,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;317&quot;:[[],{&quot;key&quot;:317,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;3346&quot;:[[],{&quot;key&quot;:3346,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;2431&quot;:[[],{&quot;key&quot;:2431,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;3349&quot;:[[],{&quot;key&quot;:3349,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;1605&quot;:[[],{&quot;key&quot;:1605,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;1260&quot;:[[],{&quot;key&quot;:1260,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;2360&quot;:[[],{&quot;key&quot;:2360,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;500&quot;:[[],{&quot;key&quot;:500,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;3429&quot;:[[],{&quot;key&quot;:3429,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;2597&quot;:[[],{&quot;key&quot;:2597,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;680&quot;:[[],{&quot;key&quot;:680,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;1843&quot;:[[],{&quot;key&quot;:1843,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;216&quot;:[[],{&quot;key&quot;:216,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;237&quot;:[[],{&quot;key&quot;:237,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}],&quot;2920&quot;:[[],{&quot;key&quot;:2920,&quot;class&quot;:&quot;App\\Models\\Component&quot;,&quot;relations&quot;:[&quot;user&quot;],&quot;s&quot;:&quot;elmdl&quot;}]},{&quot;class&quot;:&quot;Illuminate\\Support\\Collection&quot;,&quot;s&quot;:&quot;clctn&quot;}],&quot;is_loaded&quot;:true,&quot;limit&quot;:18,&quot;minBias&quot;:3},{&quot;s&quot;:&quot;arr&quot;}],&quot;C_R&quot;:[{&quot;components&quot;:[[],{&quot;class&quot;:&quot;Illuminate\\Support\\Collection&quot;,&quot;s&quot;:&quot;clctn&quot;}],&quot;is_loaded&quot;:false,&quot;limit&quot;:18},{&quot;s&quot;:&quot;arr&quot;}],&quot;S_S&quot;:[{&quot;components&quot;:[[],{&quot;class&quot;:&quot;Illuminate\\Support\\Collection&quot;,&quot;s&quot;:&quot;clctn&quot;}],&quot;is_loaded&quot;:false,&quot;limit&quot;:18,&quot;minScore&quot;:3},{&quot;s&quot;:&quot;arr&quot;}]},{&quot;s&quot;:&quot;arr&quot;}],&quot;debug&quot;:false,&quot;shouldRandomize&quot;:false,&quot;defaultRouteName&quot;:&quot;components.show&quot;,&quot;productBanner&quot;:null,&quot;bannerDisplayOnPosition&quot;:3},&quot;memo&quot;:{&quot;id&quot;:&quot;y4v88ZdRDrPQBjBSggbT&quot;,&quot;name&quot;:&quot;component-recommendation&quot;,&quot;path&quot;:&quot;@noob_dev\/user-profile-card-with-cover-image&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;a74d88af39ca078a2ebd2c5d8076ebf78bc09188e108638620d03501685e346b&quot;}" wire:effects="[]" wire:id="y4v88ZdRDrPQBjBSggbT" class="mt-6">
+
+    <p class="my-4 text-xl font-bold text-center dark:text-gray-300 md:text-2xl">Related Examples</p>
+
+    <ul class="grid w-full gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <!--[if BLOCK]><![endif]-->            <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:209:components.show" href="https://tailwindflex.com/@prashant/user-profile-card">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u.min.webp" alt="User Profile Card" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:209:components.show" href="https://tailwindflex.com/@prashant/user-profile-card" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                User Profile Card
+            </a>
+
+            <!--[if BLOCK]><![endif]-->                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    The card features a user's profile picture, name, location, and options for interactions. It has a clean and modern design with rounded edges and icons for user engagement. 
+It also has support for dark mod:
+                </p>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@prashant" class="shrink-0" aria-label="Visit Prashant&#39;s profile">
+                    <img src="./card-1_files/8.min.webp" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Prashant">
+                </a>
+
+                <a href="https://tailwindflex.com/@prashant" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Prashant
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        64.9k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:237:components.show" href="https://tailwindflex.com/@prashant/user-profile-card-3">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/canvas.min.webp" alt="User Profile Card" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:237:components.show" href="https://tailwindflex.com/@prashant/user-profile-card-3" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                User Profile Card
+            </a>
+
+            <!--[if BLOCK]><![endif]-->                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Full-page Profile card
+                </p>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@prashant" class="shrink-0" aria-label="Visit Prashant&#39;s profile">
+                    <img src="./card-1_files/8.min.webp" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Prashant">
+                </a>
+
+                <a href="https://tailwindflex.com/@prashant" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Prashant
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        19.8k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <iframe style="aspect-ratio: 16 / 10" data-has-dark="1" sandbox="allow-forms allow-modals allow-pointer-lock allow-same-origin allow-scripts allow-presentation" loading="lazy" scrolling="no" class="bg-white thumb-iframe rounded-t-md w-full min-h-[240px] h-max" src="./card-1_files/fullscreen-preview.html" tabindex="-10" title="Profile Card" frameborder="0"></iframe>
+            <a data-clickable="Component:987:components.show" href="https://tailwindflex.com/@TamaniPhiri/profile-card-6" class="absolute top-0 right-0 w-full h-full"></a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:987:components.show" href="https://tailwindflex.com/@TamaniPhiri/profile-card-6" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Profile Card
+            </a>
+
+            <!--[if BLOCK]><![endif]-->                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Show more details on hover 
+                </p>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@TamaniPhiri" class="shrink-0" aria-label="Visit Tamani Phiri&#39;s profile">
+                    <img src="./card-1_files/108270321" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Tamani Phiri">
+                </a>
+
+                <a href="https://tailwindflex.com/@TamaniPhiri" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Tamani Phiri
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    2 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        14.8k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:545:components.show" href="https://tailwindflex.com/@samuel33/hover-effect-card">
+                <video width="600" height="384" autoplay="" muted="" loop="" class="relative w-full rounded-t-md">
+                    <source src="https://tailwindflex.com/storage/thumbnails/hover-effect-card/thumb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:545:components.show" href="https://tailwindflex.com/@samuel33/hover-effect-card" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Hover effect card
+            </a>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@samuel33" class="shrink-0" aria-label="Visit Samuel Dawson&#39;s profile">
+                    <img src="./card-1_files/141.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Samuel Dawson">
+                </a>
+
+                <a href="https://tailwindflex.com/@samuel33" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Samuel Dawson
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        32.8k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:89:components.show" href="https://tailwindflex.com/@amit/responsive-card-grid">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(1).min.webp" alt="Responsive Card Grid" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:89:components.show" href="https://tailwindflex.com/@amit/responsive-card-grid" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Responsive Card Grid
+            </a>
+
+            <!--[if BLOCK]><![endif]-->                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Tailwind CSS responsive grid for feature listing.
+The cards have a teal background, rounded corners, and a concise display of feature titles, descriptions, and a "Learn More" link.
+                </p>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@amit" class="shrink-0" aria-label="Visit Amit Pachange&#39;s profile">
+                    <img src="./card-1_files/54.jpg" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Amit Pachange">
+                </a>
+
+                <a href="https://tailwindflex.com/@amit" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Amit Pachange
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        52.9k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:702:components.show" href="https://tailwindflex.com/@lucas-m/show-user-details">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(2).min.webp" alt="Show user details" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:702:components.show" href="https://tailwindflex.com/@lucas-m/show-user-details" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Show user details
+            </a>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@lucas-m" class="shrink-0" aria-label="Visit Lucas Martinez&#39;s profile">
+                    <img src="./card-1_files/189.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Lucas Martinez">
+                </a>
+
+                <a href="https://tailwindflex.com/@lucas-m" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Lucas Martinez
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        25.9k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:178:components.show" href="https://tailwindflex.com/@krishna/profile-card">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(3).min.webp" alt="Profile card" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:178:components.show" href="https://tailwindflex.com/@krishna/profile-card" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Profile card
+            </a>
+
+            <!--[if BLOCK]><![endif]-->                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Profile card with social icons
+                </p>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@krishna" class="shrink-0" aria-label="Visit Krishna Gudpalle&#39;s profile">
+                    <img src="./card-1_files/58.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Krishna Gudpalle">
+                </a>
+
+                <a href="https://tailwindflex.com/@krishna" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Krishna Gudpalle
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        13.4k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:818:components.show" href="https://tailwindflex.com/@rp-ketan/basic-resume-template">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/canvas(1).min.webp" alt="Basic Resume template" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:818:components.show" href="https://tailwindflex.com/@rp-ketan/basic-resume-template" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Basic Resume template
+            </a>
+
+            <!--[if BLOCK]><![endif]-->                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    simple and clean layout that provides a professional look.
+                </p>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@rp-ketan" class="shrink-0" aria-label="Visit R.P Ketan&#39;s profile">
+                    <img src="./card-1_files/user.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="R.P Ketan">
+                </a>
+
+                <a href="https://tailwindflex.com/@rp-ketan" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        R.P Ketan
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        28k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:717:components.show" href="https://tailwindflex.com/@kofi-osei/about-me-section-with-image">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/canvas(2).min.webp" alt="About me section with image" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:717:components.show" href="https://tailwindflex.com/@kofi-osei/about-me-section-with-image" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                About me section with image
+            </a>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@kofi-osei" class="shrink-0" aria-label="Visit Kofi Osei&#39;s profile">
+                    <img src="./card-1_files/194.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Kofi Osei">
+                </a>
+
+                <a href="https://tailwindflex.com/@kofi-osei" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Kofi Osei
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        25.2k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:494:components.show" href="https://tailwindflex.com/@mr-robot/profile-card-5">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(4).min.webp" alt="Profile card" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:494:components.show" href="https://tailwindflex.com/@mr-robot/profile-card-5" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Profile card
+            </a>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@mr-robot" class="shrink-0" aria-label="Visit Mr Robot&#39;s profile">
+                    <img src="./card-1_files/84.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Mr Robot">
+                </a>
+
+                <a href="https://tailwindflex.com/@mr-robot" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Mr Robot
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        13.2k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:862:components.show" href="https://tailwindflex.com/@simon-scheffer/user-profile-card-with-social-icons">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(5).min.webp" alt="User profile card with social icons" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:862:components.show" href="https://tailwindflex.com/@simon-scheffer/user-profile-card-with-social-icons" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                User profile card with social icons
+            </a>
+
+            <!--[if BLOCK]><![endif]-->                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Showcases a user's profile information along with links to their various social media accounts.
+                </p>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@simon-scheffer" class="shrink-0" aria-label="Visit Simon Scheffer&#39;s profile">
+                    <img src="./card-1_files/168.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Simon Scheffer">
+                </a>
+
+                <a href="https://tailwindflex.com/@simon-scheffer" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Simon Scheffer
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        15.5k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:279:components.show" href="https://tailwindflex.com/@abhi/minimal-profile-card">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(6).min.webp" alt="Minimal Profile card" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:279:components.show" href="https://tailwindflex.com/@abhi/minimal-profile-card" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Minimal Profile card
+            </a>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@abhi" class="shrink-0" aria-label="Visit Abhijit Sen&#39;s profile">
+                    <img src="./card-1_files/unnamed.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Abhijit Sen">
+                </a>
+
+                <a href="https://tailwindflex.com/@abhi" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Abhijit Sen
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        12k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:1006:components.show" href="https://tailwindflex.com/@anonymous/stylish-profile-card-with-a-hover-effect">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(7).min.webp" alt="Stylish profile card with a hover effect" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:1006:components.show" href="https://tailwindflex.com/@anonymous/stylish-profile-card-with-a-hover-effect" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Stylish profile card with a hover effect
+            </a>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@anonymous" class="shrink-0" aria-label="Visit Anonymous&#39;s profile">
+                    <img src="./card-1_files/4.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Anonymous">
+                </a>
+
+                <a href="https://tailwindflex.com/@anonymous" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Anonymous
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    2 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        9.5k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:275:components.show" href="https://tailwindflex.com/@abhi/user-profile-card-4">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(8).min.webp" alt="User Profile Card" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:275:components.show" href="https://tailwindflex.com/@abhi/user-profile-card-4" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                User Profile Card
+            </a>
+
+            <!--[if BLOCK]><![endif]-->                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Useful for testimonials and reviews section
+                </p>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@abhi" class="shrink-0" aria-label="Visit Abhijit Sen&#39;s profile">
+                    <img src="./card-1_files/unnamed.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Abhijit Sen">
+                </a>
+
+                <a href="https://tailwindflex.com/@abhi" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Abhijit Sen
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        11.1k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:1048:components.show" href="https://tailwindflex.com/@cguy2000/user-author-profile-card-template">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(9).min.webp" alt="User | Author profile card template" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:1048:components.show" href="https://tailwindflex.com/@cguy2000/user-author-profile-card-template" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                User | Author profile card template
+            </a>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@cguy2000" class="shrink-0" aria-label="Visit Computer guy&#39;s profile">
+                    <img src="./card-1_files/465.jpg" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Computer guy">
+                </a>
+
+                <a href="https://tailwindflex.com/@cguy2000" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Computer guy
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    2 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        9.7k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:493:components.show" href="https://tailwindflex.com/@mr-robot/author-box">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(10).min.webp" alt="Author box" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:493:components.show" href="https://tailwindflex.com/@mr-robot/author-box" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Author box
+            </a>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@mr-robot" class="shrink-0" aria-label="Visit Mr Robot&#39;s profile">
+                    <img src="./card-1_files/84.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Mr Robot">
+                </a>
+
+                <a href="https://tailwindflex.com/@mr-robot" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Mr Robot
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        12.5k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:282:components.show" href="https://tailwindflex.com/@gopi/responsive-user-card-with-tailwind">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/canvas(3).min.webp" alt="Responsive user card with tailwind" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:282:components.show" href="https://tailwindflex.com/@gopi/responsive-user-card-with-tailwind" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                Responsive user card with tailwind
+            </a>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@gopi" class="shrink-0" aria-label="Visit Gopi Yadav&#39;s profile">
+                    <img src="./card-1_files/20.jpg" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Gopi Yadav">
+                </a>
+
+                <a href="https://tailwindflex.com/@gopi" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Gopi Yadav
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        11.7k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <li class="component-card">
+    
+    <div class="relative w-full min-h-[240px]">
+
+        <!--[if BLOCK]><![endif]-->            <a data-clickable="Component:495:components.show" href="https://tailwindflex.com/@mr-robot/user-profile-card-5">
+                
+                <img class="relative w-full thumb-img rounded-t-md" src="./card-1_files/thumb_u(11).min.webp" alt="User profile card" loading="lazy" width="600" height="384">
+            </a>
+        <!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+
+    <div class="flex flex-col gap-2 p-2 justify-beetween">
+
+        <div class="w-full two-lines">
+
+            <a data-clickable="Component:495:components.show" href="https://tailwindflex.com/@mr-robot/user-profile-card-5" class="text-lg font-semibold text-gray-900 md:text-xl dark:text-white hover:text-primary-800 dark:hover:text-primary-300">
+                User profile card
+            </a>
+
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </div>
+
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2 py-2">
+                <a href="https://tailwindflex.com/@mr-robot" class="shrink-0" aria-label="Visit Mr Robot&#39;s profile">
+                    <img src="./card-1_files/84.png" class="object-cover w-8 h-8 rounded-md shrink-0 md:w-10 md:h-10 dark:border-none" loading="lazy" alt="Mr Robot">
+                </a>
+
+                <a href="https://tailwindflex.com/@mr-robot" class="text-xs text-gray-600 dark:text-gray-300 hover:text-primary-800 md:text-sm">
+                    <small>Author:</small>
+                    <br>
+                    <span class="text-primary-600 dark:text-primary-100">
+                        Mr Robot
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="flex items-center gap-1">
+                <div class="hidden px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300 md:block">
+                    3 years ago
+                </div>
+
+                <div title="total views" class="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded bg-gray-300/30 dark:bg-gray-700/90 dark:text-gray-300">
+
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+
+                    <span>
+                        11.8k
+                    </span>
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</li>
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->        <!--[if ENDBLOCK]><![endif]-->    </ul>
+
+    <!--[if BLOCK]><![endif]-->        <div class="relative flex justify-center my-4">
+            <button prefe="" wire:click="loadMore()" class="inline-flex items-center gap-1 px-4 py-2 my-3 text-xl font-semibold transition duration-500 bg-gray-100 border rounded-md shadow md:text-2xl dark:bg-transparent dark:border-gray-300 dark:text-gray-200 hover:shadow-primary-400">
+                Load more
+                <span class="hidden md:inline-block">examples</span>
+
+                <span class="items-center" wire:loading.class="hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 pt-1 stroke-gray-800 dark:stroke-gray-100" viewBox="0 0 24 24" fill="none">
+                        <path d="M19.9201 8.9502L13.4001 15.4702C12.6301 16.2402 11.3701 16.2402 10.6001 15.4702L4.08008 8.9502" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span>
+
+                <span class="items-center" wire:loading="">
+                    <svg class="w-6 h-6 animate-spin stroke-gray-500 dark:stroke-gray-100" viewBox="0 0 256 256">
+                        <line x1="128" y1="32" x2="128" y2="64" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                        <line x1="195.9" y1="60.1" x2="173.3" y2="82.7" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                        <line x1="224" y1="128" x2="192" y2="128" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                        <line x1="195.9" y1="195.9" x2="173.3" y2="173.3" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                        <line x1="128" y1="224" x2="128" y2="192" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                        <line x1="60.1" y1="195.9" x2="82.7" y2="173.3" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                        <line x1="32" y1="128" x2="64" y2="128" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                        <line x1="60.1" y1="60.1" x2="82.7" y2="82.7" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    <!--[if ENDBLOCK]><![endif]--></div>
+
+        
+    </div>
+
+    <div class="p-2 ">
+    <p class="mt-10 mb-4 heading">Explore components by Tags</p>
+
+    
+
+    <div class="flex flex-wrap gap-3 justify-center px-2 md:px-4 my-6">
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/footer">Footer</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/header">Header</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/card">Card</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/article">Article</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/avatar">Avatar</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/faq">FAQ</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/banner">Banner</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/blog">Blog</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/breadcrumb">Breadcrumb</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/button">Button</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/call-to-action">Call to
+        Action</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/form">Form</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/carousel">Carousel</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/contact-us-page">Contact
+        us</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/error-page">Error page</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/feature">Feature</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/gallery">Gallery</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/hero">Hero</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/input">Input</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/loading">Spinner</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/login">Login</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/modal">Modal</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/pagination">Pagination</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/pricing">Pricing</a>
+    <a class="px-2 py-1 bg-gray-100 rounded dark:bg-gray-600/50 dark:text-gray-50" href="https://tailwindflex.com/tag/profile">Profile</a>
+
+
+    
+    <a class="flex items-center gap-1 px-2 py-1 bg-primary-300/50 rounded dark:bg-primary-300/30 dark:text-gray-50" href="https://tailwindflex.com/tags">
+        <span>View all tags</span>
+        <span class="pt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+            </svg>
+        </span>
+    </a>
+</div>
+
+</div>
+
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="relative px-6 py-20 overflow-hidden text-center bg-white isolate sm:px-16 sm:shadow-sm dark:bg-transparent">
+
+        <p class="max-w-2xl mx-auto text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl">
+            Didn't find component you were looking for?
+        </p>
+
+        <p class="max-w-xl mx-auto mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            Search from 3000+ components
+        </p>
+
+        <form action="https://tailwindflex.com/search">
+            <div class="relative flex flex-col items-center justify-center max-w-2xl gap-2 px-2 py-2 mx-auto mt-8 bg-white border shadow-2xl dark:bg-gray-50 min-w-sm md:flex-row rounded-2xl focus-within:border-gray-300">
+
+                <input id="search-bar" placeholder="keyword" name="q" class="flex-1 w-full px-6 py-2 bg-white rounded-md outline-none dark:bg-gray-50" required="">
+                <button type="submit" class="relative w-full px-6 py-3 overflow-hidden text-white transition-all duration-100 bg-black border border-black md:w-auto fill-white active:scale-95 will-change-transform rounded-xl">
+                    <span class="flex items-center transition-all opacity-1">
+                        <span class="mx-auto text-sm font-semibold truncate whitespace-nowrap">
+                            Search
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </form>
+
+        <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]" aria-hidden="true">
+            <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fill-opacity="0.7">
+            </circle>
+            <defs>
+                <radialgradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
+                    <stop stop-color="#3b82f6"></stop>
+                    <stop offset="1" stop-color="#1d4ed8"></stop>
+                </radialgradient>
+            </defs>
+        </svg>
+    </div>
+</div>
+
+    </main>
+    <div class="pt-8 mx-auto bg-white border-t-2 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600">
+    <div class="grid gap-12 row-gap-6 px-4 mb-8 md:px-8 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div class="sm:col-span-2">
+            <a href="https://tailwindflex.com/" aria-label="home" title="tailwindflex.com" class="inline-flex items-center">
+                <img src="./card-1_files/logo.svg" height="64" width="64" alt="tailwindflex logo" class="w-10">
+                <span class="ml-2 text-xl font-bold tracking-wide dark:text-gray-200">TailwindFlex.com</span>
+            </a>
+            <div class="mt-6 lg:max-w-sm ">
+                Tailwindflex.com is a free Tailwind CSS examples library. It's a one-stop destination for ready-made
+                Tailwind CSS components and templates.
+            </div>
+        </div>
+
+        <div class="text-sm">
+            <div>
+                <p class="text-base font-bold tracking-wide dark:text-gray-300">Contact</p>
+
+                <div class="flex flex-col gap-1 mt-2">
+                    <p class="mr-1">Email: <a href="mailto:admin@tailwindflex.com" aria-label="email" title="Our email" class="text-primary-600">admin@tailwindflex.com</a></p>
+                </div>
+
+                
+            </div>
+            
+        </div>
+
+        <div class="text-sm">
+            
+
+            <div>
+                <p class="text-base font-bold tracking-wide dark:text-gray-200">Resources</p>
+                <div class="flex flex-col gap-1 mt-2">
+                    <a href="https://onlineminitools.com/tailwind-css-gradient-generator" target="_blank">Tailwind CSS
+                        Gradient Generator</a>
+                    <a href="https://bootstrapexamples.com/" target="_blank">Free Bootstrap CSS Components</a>
+                    <a href="http://uisnips.com/" target="_blank">Free CSS Components</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex flex-col-reverse justify-between gap-2 px-4 pt-4 pb-8 text-sm border-t md:px-8 dark:border-gray-600 lg:flex-row">
+
+        <p class="">
+            © 2026 TailwindFlex. All Rights Reserved.
+        </p>
+
+        <div>v1.12</div>
+
+        
+
+        <ul class="flex flex-col gap-2 mb-4 text-sm sm:flex-row md:mb-0">
+            <li class="md:border-r-2 dark:border-gray-600 md:pr-2">
+                <a href="https://tailwindflex.com/#faq">FAQs</a>
+            </li>
+            <li class="md:border-r-2 dark:border-gray-600 md:pr-2">
+                <a href="https://tailwindflex.com/privacy-policy">
+                    Privacy Policy
+                </a>
+            </li>
+            <li class="md:border-r-2 dark:border-gray-600 md:pr-2">
+                <a href="https://tailwindflex.com/terms-of-service">
+                    Terms of Service
+                </a>
+            </li>
+            <li class="md:border-r-2 dark:border-gray-600 md:pr-2">
+                <a href="https://tailwindflex.com/component-contribution-guidelines">
+                    Contribution Guidelines
+                </a>
+            </li>
+            <li>
+                <a href="https://tailwindflex.com/legal">
+                    Legal
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    <link rel="modulepreload" href="./card-1_files/app-CEC-u909.js.download"><ins class="adsbygoogle adsbygoogle-noablate" data-ad-hi="true" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" style="border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;min-height:auto;max-height:none;min-width:auto;max-width:none;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="./card-1_files/ads.html" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true"></iframe></div></ins><script type="module" src="./card-1_files/app-CEC-u909.js.download" data-navigate-track="reload"></script>        <link rel="modulepreload" href="./card-1_files/component-page-BzY09Ery.js.download"><script type="module" src="./card-1_files/component-page-BzY09Ery.js.download" data-navigate-track="reload"></script>    <link rel="modulepreload" href="./card-1_files/ComponentPreview-CeKf6-ID.js.download"><link rel="modulepreload" href="https://tailwindflex.com/build/assets/usePage-DVm2KdKa.js"><link rel="modulepreload" href="https://tailwindflex.com/build/assets/_commonjsHelpers-D6-XlEtG.js"><script type="module" src="./card-1_files/ComponentPreview-CeKf6-ID.js.download" data-navigate-track="reload"></script>    
+<script src="./card-1_files/livewire.min.js.download" data-csrf="piQV8FYW1XPv6TYg0VhUCkRGNsaL6sAKsho77LKV" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+<script defer="" src="./card-1_files/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;70035086ba5840708c340997e234f57f&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status="displayed" style="display: block; bottom: 0px; clear: none !important; float: none !important; height: 95px; left: 50%; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; width: auto; z-index: 2147483647; transform: translateX(-50%); box-shadow: rgba(0, 0, 0, 0.5) 0px -4px 12px -4px, rgba(0, 0, 0, 0.3) 0px 4px 8px -3px; border-radius: 5px; background: rgb(250, 250, 250) !important;" data-ad-status="filled" data-anchor-shown="true"><div class="grippy-host"><template shadowrootmode="closed"><ins class="ee" style="inset: auto !important; clear: none !important; display: block !important; float: none !important; height: 5px !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: relative !important; vertical-align: baseline !important; visibility: visible !important; width: auto !important; z-index: 1 !important; background-color: rgb(250, 250, 250) !important; box-shadow: rgba(0, 0, 0, 0.5) 0px -4px 12px -4px, rgba(0, 0, 0, 0.3) 0px 4px 8px -3px !important; border-top-left-radius: 5px !important; border-top-right-radius: 5px !important;"><span style="display: block !important; width: 80px !important; height: 45px !important; bottom: 0px !important; left: 50% !important; pointer-events: none !important; position: absolute !important; transform: translateX(-50%) !important;"><svg style="margin: 0px !important; position: absolute !important; bottom: 0px !important; left: 0% !important; display: block !important; width: 80px !important; height: 30px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="dropShadowTop" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><fecomponenttransfer in="SourceAlpha" result="TransferredAlpha"><fefuncr type="discrete" tableValues="0.5"></fefuncr><fefuncg type="discrete" tableValues="0.5"></fefuncg><fefuncb type="discrete" tableValues="0.5"></fefuncb></fecomponenttransfer><fegaussianblur in="TransferredAlpha" stdDeviation="2"></fegaussianblur><feoffset dx="0" dy="0" result="offsetblur"></feoffset><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><path d="M10,26 L10,6 A6,6 0 0,1 16,1 L60,1 A6,6 0 0,1 66,6 L66,20 66,26 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#dropShadowTop&quot;);"></path><rect x="0" y="25" width="80" height="5" style="fill: rgb(250, 250, 250);"></rect><g class="down" stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="32" y1="12" x2="38" y2="18"></line><line x1="38" y1="18" x2="44" y2="12"></line></g></svg></span></ins></template></div><div id="aswift_2_host" style="border-width: medium !important; border-style: none !important; border-color: currentcolor !important; border-image: initial !important; height: 90px; width: 728px !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_2" name="aswift_2" style="min-height: auto; max-height: none; min-width: auto; max-width: none; width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="./card-1_files/zrt_lookup_fy2021.html" data-google-container-id="a!3" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CJ_hzbWPhpUDFWk0RAgdsZwWOw" data-load-complete="true"></iframe></div></ins><iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; z-index: -1000; left: -1000px; top: -1000px;" src="./card-1_files/saved_resource(1).html"></iframe><iframe name="__tcfapiLocator" src="./card-1_files/saved_resource(2).html" style="display: none; width: 0px; height: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__uspapiLocator" src="./card-1_files/saved_resource(3).html" style="display: none; width: 0px; height: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__gppLocator" src="./card-1_files/saved_resource(4).html" style="display: none; width: 0px; height: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="./card-1_files/saved_resource(5).html" style="display: none; width: 0px; height: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="./card-1_files/saved_resource(6).html" style="display: none; width: 0px; height: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe src="./card-1_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./card-1_files/zrt_lookup_fy2021(1).html" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true" tabindex="0"><div id="aswift_1_host" style="border-width: medium !important; border-style: none !important; border-color: currentcolor !important; border-image: initial !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_1" name="aswift_1" style="min-height: auto !important; max-height: none !important; min-width: auto !important; max-width: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="./card-1_files/zrt_lookup_fy2021(2).html" data-google-container-id="a!2" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CJ7hzbWPhpUDFWk0RAgdsZwWOw" data-load-complete="true"></iframe></div></ins></html>
