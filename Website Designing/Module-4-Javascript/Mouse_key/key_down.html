@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Circle</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: crimson;
+            border-radius: 100px;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>Somthing Written Here!!!</div>
+    <script>
+        
+       var a = document.getElementsByTagName("div")[0];
+
+       var rotate = 0;
+document.addEventListener('keydown', function(event) {
+    if (event.key == "ArrowUp") {
+        var top = parseInt(a.style.marginTop) || 0;
+        a.style.marginTop = (top - 5) + "px";
+        a.style.transform = "rotate(" + (rotate - 5) + "deg)";
+        rotate-=5;
+    }
+    else if (event.key == "ArrowDown") {
+        var top = parseInt(a.style.marginTop) || 0;
+        a.style.marginTop = (top + 5) + "px";
+        a.style.transform = "rotate(" + (rotate + 5) + "deg)";
+        rotate+=5;
+    }
+    else if (event.key == "ArrowLeft") {
+        var left = parseInt(a.style.marginLeft) || 0;
+        a.style.marginLeft = (left - 5) + "px";
+        a.style.transform = "rotate(" + (rotate - 5) + "deg)";
+        rotate-=5;
+    }
+    else if (event.key == "ArrowRight") {
+        var left = parseInt(a.style.marginLeft) || 0;
+        a.style.marginLeft = (left + 5) + "px";
+        a.style.transform = "rotate(" + (rotate + 5) + "deg)"; 
+        rotate+=5;
+    }
+    else {
+        console.log(event.key);
+    }
+});
+    </script>
+</body>
+</html>

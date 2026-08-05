@@ -1,0 +1,96 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+ul li{
+    list-style-type: none;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.searchbox{
+    margin-left: 15%;
+    width: 30%;
+    font-size: smaller;
+    background-color: rgb(231, 231, 231);
+}
+.put{
+    outline: none;
+    background-color: rgb(231, 231, 231);
+}
+.buttons{
+    text-align: center;
+    margin-left: 50px;
+}
+.icons{
+    margin-left: 50px;
+    height: 40px;
+    position: relative;
+    
+}
+.icons1::after{
+    font-size: smaller;
+    font-weight: bolder;
+    content: 'Wishlist';
+    position: absolute;
+    bottom: 2px;
+    left: -15px;
+}
+.icons2::after{
+    font-size: smaller;
+    font-weight: bolder;
+    content: 'Bag';
+    position: absolute;
+    bottom: 0px;
+    left: -2px;
+}
+.card{
+    width: 30%;
+    margin:auto;
+}
+.num{
+    width: 90%;
+    padding: 0.5rem;
+    padding-left: 5%;
+    outline: none;
+    font-size: 14px;
+    border: 1px solid rgb(155, 155, 155);
+}
+.check{
+   position: relative;
+   top: -10px;
+}
+.sizeo{
+    font-size:15px;
+}
+.everything{
+    font-size: 14px;
+}
+.conti{
+    border: none;
+    width: 90%;
+    height: 40px;
+}
+.signup{
+    font-size: 14px;
+    margin-bottom: 100px;
+}
+@media only screen and (max-width: 993px){
+
+    .card{
+    width: 100%;
+    margin:auto;
+}
+.navbar-nav{
+    flex-direction: row;
+}
+.navbar-brand{
+    margin-right: 5px;
+    width: 25px;
+}
+.bi-search{
+    width: 10px;
+}
+ul li{
+    font-size: 10px;
+}
+}

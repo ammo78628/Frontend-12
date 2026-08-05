@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Background Images</title>
+<link rel='stylesheet' href='main.css'>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+        padding: 40px 16px;
+    }
+    #content {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .card {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 18px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+        padding: 24px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .card h1 {
+        margin: 0 0 14px;
+        font-size: 1.5rem;
+    }
+    .card p {
+        margin: 0;
+        line-height: 1.7;
+        color: #f2f7ff;
+    }
+</style>
+</head>
+<body>
+    <section id="content">
+        <div class="card">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vero repellat dignissimos harum, provident esse sequi quasi ullam quisquam facilis minus autem dolor soluta nam nisi tempora labore magni eaque.
+        </div>
+    </section>
+</body>
+</html>

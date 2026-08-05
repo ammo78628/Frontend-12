@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Marquee Direction Examples</title>
+    <style>
+        .container {
+            width: 60%;
+            height: auto;
+            margin: 5% auto;
+            border: solid 1px black;
+            padding: 20px;
+        }
+        marquee {
+            background: grey;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Directional Examples</h1> 
+    
+    <p>Default (Left):</p>
+    <marquee><p>I am going to the left.</p></marquee> 
+
+    <p>Direction - Right:</p>
+    <marquee direction="right"><p>I am going to the right.</p></marquee> 
+
+    <p>Direction - Up:</p>
+    <marquee direction="up" height="100px"><p>I am going up.</p></marquee> 
+
+    <p>Direction - Down:</p>
+    <marquee direction="down" height="100px"><p>I am going down.</p></marquee>
+</div>
+
+<div class="container">
+    <h1>Behavior & Interaction</h1>
+
+    <p>Behavior - Slide (at speed 20):</p>
+    <marquee direction="left" behavior="slide" scrollamount="20">
+        <p>I will slide in and stop.</p>
+    </marquee>
+
+    <p>Behavior - Scroll (Hover to Stop):</p>
+    <marquee direction="left" behavior="scroll" scrollamount="15" onmouseover="this.stop();" onmouseout="this.start();">
+        <p>I am scrolling left. Hover over me to stop!</p>
+    </marquee>
+
+    <p>Behavior - Alternate:</p>
+    <marquee direction="left" behavior="alternate" scrollamount="10">
+        <p>I am bouncing back and forth (left and right).</p>
+    </marquee>
+</div>
+
+</body>
+</html>

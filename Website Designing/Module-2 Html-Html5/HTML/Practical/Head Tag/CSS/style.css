@@ -1,0 +1,17 @@
+body 
+{
+background-color: Aqua;    
+}  
+h1 
+{
+text-align: center;
+text-decoration: underline;    
+font-size: 55px;
+font-family: cursive;
+}  
+p{
+text-align: center;
+font-size: 25px;
+font-family: cursive;
+}
+

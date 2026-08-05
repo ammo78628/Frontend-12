@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        form{
+            width: 300px;
+           margin: auto;
+           margin-top: 8%;
+           background-color: white;
+           height: 250px;
+        }
+        form h1{
+            background-color: rgb(0, 119, 255);
+            text-align: center;
+            color: white;
+            font-size: 25px;
+        }
+        form input{
+            border: none;
+            border-bottom: 1px solid black;
+            width: 50px;
+            outline: none;
+        }
+        label,input[type="range"],#msg{
+            margin-left: 30px;
+            width: 80%;
+        }
+        input[type="number"]{
+            margin-top: 20px;
+        }
+        #prt{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Tip Calculator</h1>
+        <label>Bill: ₹</label>
+        <input type="number" id="amt" value="150"><br>
+        <label>People: </label>
+        <input type="number" id="ppl" value="2">
+        <p>
+        <label>Tip Percentage </label>
+        <span id="prt">25%</span><br>
+        </p>
+        <input type="range" min="0" max="100" value="25" id="vals">
+        <p id="msg">Each person should tip ₹<span id="tip">18.750</span></p>
+    </form>
+    <script>
+       var rng= document.getElementById("vals");
+       var bill=document.getElementById("amt");
+       var prson=document.getElementById("ppl");
+
+       function allcalculation(){
+            var num = rng.value;
+            var billamt= bill.value;
+            var prn= prson.value;
+            var tipper = document.getElementById("prt");
+            var given = document.getElementById("tip");
+            tipper.innerText=num+"%";
+            if(billamt<0 && prn<0){
+                given.innerText= "Enter Valid Amount and People";
+            }
+            else if (billamt<=0) {
+                given.innerText= "Enter Valid Amout";
+            }
+            else if(prn<=0){
+                given.innerText= "Enter Valid People";
+            }
+            else{
+            given.innerText= ((billamt/prn)*num/100).toFixed(3);
+            }
+        }
+        rng.addEventListener('input',allcalculation);
+        bill.addEventListener('input',allcalculation);
+        prson.addEventListener('input',allcalculation);
+    </script>
+</body>
+</html>

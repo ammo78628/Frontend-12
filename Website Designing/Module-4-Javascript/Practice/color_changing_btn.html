@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Magic</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    <button class="color-btn">Change Color!</button>
+
+    <script>
+const myBox = document.querySelector(".box");
+const myButton = document.querySelector(".color-btn");
+let toggle=true;
+myButton.addEventListener("click", function() {
+    if(toggle){
+    myBox.style.backgroundColor = "coral";
+    myBox.style.borderRadius = "50%";
+    myBox.style.transition = "1s all ease";
+    myBox.style.transform = "translateX(150px)";
+    toggle=false;
+    }
+    else{
+    myBox.style.backgroundColor = "gray";
+    myBox.style.borderRadius = "0";
+    myBox.style.transition = "1s all ease";
+    myBox.style.transform = "translateX(0px)";
+    toggle=true;
+    }
+});
+    </script>
+
+</body>
+</html>

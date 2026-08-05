@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        var a={
+            fname :"Ammar",
+            lname :"Agvan",
+            age : 21,
+            address : {
+                city : 'Amreli',
+                Country : 'India'
+            },
+            salary : 'Not Found',
+            fullname : function(){
+                document.write(this.fname +' '+this.lname+'<br>');
+            }
+        };
+        a.fullname();
+        document.write(a.address.city+'<br>'+a.address.Country);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

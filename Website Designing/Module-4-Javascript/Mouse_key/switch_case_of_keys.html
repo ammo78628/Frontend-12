@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ctrl Key</title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: thistle;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var a = document.getElementsByTagName("div")[0];
+        a.addEventListener('mousedown',function(event){
+            switch (true) {
+                case event.ctrlKey:
+                    console.log("Ctrl Key is Pressed!");
+                    break;
+                case event.altKey:
+                    console.log("Alt Key is Pressed!");
+                    break;
+                case event.shiftKey:
+                    console.log("Shift Key is Pressed!");
+                    break;
+                case event.metaKey:
+                    console.log("Meta Key is Pressed!");
+                    break;
+                default:
+                    console.log("Click a valid Modifier Key!");
+                break;
+            }
+            if (event.button==0) {
+                console.log("Left Click was used!");    
+            }
+            else if (event.button==1) {
+                console.log("Middle Click was used!");    
+            }
+            else{
+                console.log("Right Click was used!");    
+            }
+        });
+    </script>
+</body>
+</html>

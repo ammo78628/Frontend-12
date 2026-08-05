@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse button</title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: thistle;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var a = document.getElementsByTagName("div")[0];
+        a.addEventListener('mousedown',function(event){
+            if (event.button==0) {
+                console.log("Left Click!");    
+            }
+            else if (event.button==1) {
+                console.log("Middle Scroll Click!");    
+            }
+            else{
+                console.log("Right Click!");    
+            }
+            
+        });
+    </script>
+</body>
+</html>

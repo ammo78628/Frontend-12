@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Bio-Link Page</title>
+   
+</head>
+<body>
+
+    <h1>Welcome to your Insta Bio-Link Page!</h1>
+    
+    <!-- Tasks 10 & 11: Heading that will turn green via JavaScript -->
+    <h2>Top 3 Food Apps</h2>
+    <ul>
+        <li>Zomato</li>
+        <li>Swiggy</li>
+        <li>Uber Eats</li>
+    </ul>
+
+    <!-- Tasks 7 & 8: Show Bio Button -->
+    <button id="bioBtn">Show Bio</button>
+
+    <!-- Task 9: Show Greeting Button -->
+    <button id="greetingBtn">Show Greeting</button>
+
+    <script>
+        // Tasks 10 & 11: Select the <h2> tag and change its color to green on load
+        const foodHeading = document.querySelector('h2');
+        foodHeading.style.color = 'green';
+
+        // Tasks 7 & 8: Show Bio button logic
+        // Task 12 note: Make sure to type your actual name here!
+        const bioButton = document.querySelector('#bioBtn');
+        bioButton.addEventListener('click', function() {
+            alert('Name: Ammar \nFavorite App: VS Code');
+        });
+
+        // Task 9: Show Greeting button logic
+        const greetingButton = document.querySelector('#greetingBtn');
+        greetingButton.addEventListener('click', function() {
+            alert('Hello from JS!');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openwindow()">Open Window</button>
+    <button onclick="movesomthing()">Move Window</button>
+    <script>
+        var win;
+        function openwindow(){
+            win = window.open("window_innersize.html",'_blank',"height=500px,width=500px");
+            win.document.write("MoveTo Example!");
+        }
+        function movesomthing(){
+            win.moveTo(200,200);
+            win.focus();
+        }
+    </script>
+</body>
+</html>

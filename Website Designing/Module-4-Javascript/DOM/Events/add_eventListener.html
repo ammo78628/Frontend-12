@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .xyz{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxy" class="xyz" style="border: 2px solid black; padding: 10px;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi 
+           molestias veniam nulla, aperiam non ipsam fuga maiores suscipit dignissimos 
+           necessitatibus facilis nesciunt provident voluptas exercitationem dolorem quas
+           dolorum repellat.
+        </p>
+        <div class="xyz" style="cursor: pointer;">
+            <h1>Boom!!!</h1>
+        </div>
+    </div>
+    <script>
+        var a=document.querySelectorAll('.xyz');
+        a[1].addEventListener('mouseout',colors);
+
+        a[0].addEventListener('dblclick',function(){
+        a[1].removeEventListener('mouseout',colors);
+    });
+        console.log(a);
+        function colors() {
+        a[1].style="background-color: red;";
+        a[1].style.border='1px solid black';
+        a[0].style.backgroundColor="yellow";
+    }
+    </script>
+</body>
+</html>

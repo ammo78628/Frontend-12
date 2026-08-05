@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics Assignment</title>
+</head>
+<body>
+
+    <h1>JavaScript Basics Assignment</h1>
+    <p>Welcome to my Insta Bio-Link Page!</p>
+    
+    <!-- Tasks 7 & 8: The Show Bio Button -->
+    <button id="bioBtn">Show Bio</button>
+    
+    <p class="instruction">Note for Professor: Right-click, select 'Inspect', and check the 'Console' tab to see the outputs for Tasks 4, 5, and 6.</p>
+
+    <script>
+        // Tasks 1, 2, & 3: Alert message when the page loads
+        alert('Welcome to your Insta Bio-Link Page!');
+
+        // Tasks 4 & 5: Console logs
+        console.log('Hello from the console!');
+
+        // Task 6: Console log
+        console.log('JS is running!');
+
+        // Tasks 7 & 8: Event listener for the "Show Bio" button
+        document.getElementById('bioBtn').addEventListener('click', function() {
+            alert('Name: Ammar \nFavorite App: VS Code');
+        });
+    </script>
+
+</body>
+</html>

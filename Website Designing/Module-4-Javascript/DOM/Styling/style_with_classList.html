@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .xyz{
+            background-color: green;
+        }
+        .abc{
+            background-color: red;
+            border: 10px solid black;
+            margin-top: 30px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="boxy" class="xyz" style="border: 2px solid black; padding: 10px;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi 
+           molestias veniam nulla, aperiam non ipsam fuga maiores suscipit dignissimos 
+           necessitatibus facilis nesciunt provident voluptas exercitationem dolorem quas
+           dolorum repellat.</p>
+           hfgdkjhfgdkhjshfjsfdfd
+           sjhdfkgsjh
+    </div>
+    <div class="xyz">
+         <h1>Boom!!!</h1>
+    </div>
+    <script>
+        var a=document.querySelectorAll('.xyz');
+        a[1].classList.add('abc');
+        console.log(a);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ary = [
+            ['harry',2,undefined,true,20],
+            ['sunny',4,42,false,18],
+             ['harry',2,undefined,true,34],
+            ['sunny',4,42,false,45]
+        ];
+        document.write("<table border='1' cellpadding='3'>");
+        for (let a = 0; a < ary.length; a++) {
+            document.write("<tr>");
+            for (let  b = 0;  b < ary[a].length; b++) {
+                document.write('<td>'+ary[a][b]+'</td>');
+            }
+                document.write("<tr>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

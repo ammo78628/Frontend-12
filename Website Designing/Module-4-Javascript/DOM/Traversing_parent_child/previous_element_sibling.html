@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            box-sizing: border-box;
+            background-color: teal;
+            height: 400px;
+            padding: 50px;
+        }
+        #inner{
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            background-color: blue;
+            min-height: 200px;
+            width: 1200px;
+            padding: 10px;
+        }
+        #inner h1{
+            flex: 0 0 100%;
+            width: 100%;
+            margin: 0 0 10px;
+        }
+        #inner div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 200px;
+            background-color: chocolate;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <h1>Outer</h1>
+        <div id="inner">
+            <h1>Inner</h1>
+            <div>A</div>
+            <div>B</div>
+            <div id="child-C">C</div>
+            <div>D</div>
+            <div>E</div>
+        </div>
+    </div>
+    <script>
+        var a= document.getElementById("child-C").previousElementSibling;
+        console.log(a);
+    </script>
+</body>
+</html>
